@@ -1,168 +1,118 @@
-# HOWTO.md: How to Create Effective Prompts for AI Assistants
+# HowTo
 
-This README provides guidance on crafting structured, impactful prompts for **Generative AI Assistants** (e.g., ChatGPT, Claude, Gemini, CoPilot, DeepSeek, Grok). These prompts act as **directives to the AI**, ensuring it understands the context, performs specific actions, and generates high-quality, actionable outputs tailored to the needs of end users like product managers.
+## 1. Purpose
 
----
+本 skill 用于帮助 **B 端供应链系统产品经理** 输出业务方能看懂的图文操作说明。
 
-## **Overview**
+它的目标不是教人“如何写 prompt”，而是帮助你写清楚：
 
-These prompts are written **for the AI Assistant to follow directly**, guiding it to produce outputs that align with user goals. By leveraging clear instructions, structured frameworks, and context-rich input, the AI can act as a powerful collaborator in solving complex problems.
+- 这个功能是干什么的
+- 用户应该从哪里开始
+- 每一步怎么操作
+- 操作后会看到什么
+- 如果操作失败或按钮不可点，应该怎么办
 
-Two critical characteristics of a well-formed prompt:
-1. Prompts must be **explicitly directed at the AI Assistant**, not the human user.
-2. Prompts must include **baked-in fallback questions** that the AI will ask if essential data (e.g., persona name, product, context) is not available in the current session.
+## 2. Default Context
 
-A critical feature of these prompts is the use of:
-1. **Fill-in-the-blank placeholders** for both user-provided inputs and AI-generated content.
-2. **Metadata comments (`<!-- -->`)** that include essential information for the user while ensuring the AI ignores them during execution.
+默认适用于以下场景：
 
----
+- 给业务方做图文操作说明
+- 给 demo 评审方做页面使用说明
+- 给内部同事写保姆级上手指南
+- 为 `User_Guide.md`、`04_Prototype_Notes.md` 或 demo 附件提供文案基础
 
-## **Key Components of the Template**
+默认适用于以下页面类型：
 
-The generic template includes the following sections:
+- 登录与身份切换
+- 列表筛选与查询
+- 详情查看
+- 提交、审核、确认、分派等关键动作
+- 异常提示与处理说明
 
-### **1. Metadata Section in Comments (`<!-- -->`)**
-- **Purpose**: Store essential information about the prompt (e.g., its purpose, usage notes, instructions) in comments that are ignored by the AI Assistant. This ensures clarity for users without disrupting AI execution.
-- **AI Instructions**: Include a note explicitly telling the AI to ignore all content within `<!-- comments -->`.
-- **Contents**: Metadata typically includes:
-  - **Description**: Explains the purpose and task of the prompt.
-  - **Usage Note**: Details prerequisites or instructions for users to prepare context for the AI.
-  - **Instructions**: Guides how the AI should behave and respond.
-  - **Attribution & Licensing**: Documents authorship and ethical guidelines for usage.
+## 3. Core Goal
 
-> ✅ **New Requirement**: Metadata must specify which **fallback questions** the AI should ask if critical data is not available in the current session.
+本 skill 的核心目标是把一个功能写成：
 
-### **2. Fill-in-the-Blank Placeholders**
-Fill-in-the-blank elements manifest in two ways:
-- **User-Provided Input Prompts**: The user provides titles, categories, or list items, and the AI generates descriptions or sub-elements dynamically.  
-  Example:  
-  * **List Item, Title or Category the User Provides** - [short description of the list item in 9 words or less that ChatGPT fills out].
+1. 一句话能说明用途
+2. 三到五步能说清操作
+3. 每一步都能说清“做什么、看到什么、结果是什么”
+4. 有失败或灰态时也能给出解释
 
-- **AI-Generated Output Prompts**: The AI generates both titles or categories and their corresponding descriptions.  
-  Example:  
-  * **[list item label or title that ChatGPT fills out]** - [short description of the list item in 9 words or less that ChatGPT fills out].
+## 4. Required Inputs
 
-### **3. Markdown Template**
-- **AI Instructions**: The prompt should always speak **directly to the AI**, using action verbs and clear directives.
-- **Output Structure**: Includes formatting (e.g., Markdown, code blocks, or bullet points) to standardize AI-generated outputs.
-- **Fallback Questions Logic**: If key context is missing, the prompt should tell the AI:
-  1. Pause before generating output.
-  2. Ask up to 3 specific, well-phrased questions to get the missing inputs.
-  3. Resume generating the output once the answers are provided.
+使用前尽量明确以下信息：
 
----
+- 当前功能名称
+- 目标使用角色
+- 操作入口在哪里
+- 核心步骤是什么
+- 成功后的结果是什么
+- 常见错误或卡点是什么
 
-## **How to Use the Template**
+如果信息不全，最多补问 3 个问题，优先问：
 
-### **Step 1: Define the AI’s Role**
-- Identify the task the AI Assistant is expected to perform (e.g., generating a positioning statement, framing a problem).
-- Write the prompt **as if giving instructions to the AI Assistant**—not to the human user.
-- Clearly articulate the **end user’s goals** and how the AI’s output will serve them.
+1. 这份说明是给哪个岗位角色看的？
+2. 这项操作从哪个页面或入口开始？
+3. 用户做完后应该看到什么结果？
 
-### **Step 2: Add Metadata Comments**
-- Use `<!-- comments -->` to include metadata such as the purpose, usage notes, fallback question logic, and licensing.
-- Add a note within the comments explicitly telling the AI to ignore all content inside `<!-- -->`.
+## 5. Output Structure
 
-### **Step 3: Write Fill-in-the-Blank Prompts**
-- Use placeholders for:
-  1. **User-Provided Inputs**: Mark required inputs clearly.
-  2. **AI-Generated Content**: Indicate areas where the AI fills in sections dynamically.
+输出时使用以下结构：
 
-### **Step 4: Include Fallback Questions**
-- Instruct the AI what to ask if required context is not present.
-- Limit to 2–4 targeted, easy-to-answer questions.
-- Place these instructions in both the metadata and body of the prompt.
-
-### **Step 5: Test and Refine**
-- Run the prompt in a live AI Assistant to ensure:
-  - Metadata is ignored properly.
-  - The AI follows the output format.
-  - It pauses and asks fallback questions when needed.
-  - Output is accurate and user-centered.
-
----
-
-## **Generic Prompt Template**
-
-~~~markdown
-# [File Name].md
-<!-- 
-## Description:
-[State the AI’s task and why it matters to the user.]
-
-## Usage Note:
-If any of the following are missing from session context — [Required Data A], [Required Data B], [Required Data C] — the AI must pause and ask the user:
-1. [Clarifying Question 1; if needed]
-2. [Clarifying Question 2; if needed]
-3. [Clarifying Question 3; if needed]
-4. [Clarifying Quesiton 4; if needed]
-
-## Instructions:
-1. You are an AI Assistant. Follow the instructions below to generate a high-quality output.
-2. If any required data is missing, ask the user for it before generating output.
-3. Use Markdown for structure and keep content clear, concise, and actionable.
-4. Ignore all content within `<!-- comments -->`.
-
-## Attribution:
-[Creator, inspiration sources, methodology used.]
-
-## Licensing:
-MIT License
-
-Date: [Insert Date]
--->
----
 ```markdown
-## [Template Title]
+## 功能说明
 
-### [Section 1 Title]
+### 1. 这个功能是干什么的
+- 一句话说明：
 
-* **[User input label]** - [AI generates this description or response].
+### 2. 适用对象
+- 适用角色：
+- 适用场景：
 
-### [Section 2 Title]
+### 3. 操作步骤
 
-* **[Another item AI generates]** - [Short, helpful response].
+#### 第 1 步
+- 你要做什么：
+- 你会看到什么：
 
-### [Optional Summary]
+#### 第 2 步
+- 你要做什么：
+- 你会看到什么：
 
-* **[Summary point]** - [Brief insight generated by AI].
+#### 第 3 步
+- 你要做什么：
+- 你会看到什么：
+
+### 4. 操作完成后的结果
+- 成功后结果：
+
+### 5. 常见问题
+- 按钮为什么是灰色：
+- 失败后怎么办：
+- 哪些地方最容易出错：
 ```
-~~~
 
----
+## 6. Writing Rules
 
-## **Best Practices for Writing Prompts**
+- 优先用白话，不用技术术语
+- 一步只讲一个动作，不要一段话塞太多内容
+- 先写用户动作，再写系统反馈
+- 能截图的步骤尽量和截图配合
+- 供应链场景下，要特别说明状态变化、异常提示和责任边界
 
-1. **Direct AI Instructions**: Always speak to the AI Assistant. Be clear about its role and output requirements.
-2. **Use Metadata Comments**: Provide instructions, fallback logic, and attribution outside the visible execution path.
-3. **Fallback Question Design**: Anticipate missing info and design 2–4 strategic questions the AI can ask to close gaps.
-4. **Test in Multiple Assistants**: Ensure prompts run cleanly in ChatGPT, Claude, Gemini, CoPilot, etc.
-5. **Structure with Markdown**: Use tables, bullets, and headers to shape well-structured, scannable outputs.
-6. **Outcome-Focused**: Keep the end user’s goal front and center.
-7. **Iterate Often**: Prompt quality improves with usage, so test and refine regularly.
+## 7. Good Output Standard
 
----
+一份合格的图文说明，应该满足：
 
-## **Example Prompts**
+- 业务方第一次看也能理解
+- 不需要懂系统术语也能照着操作
+- 每一步都知道该看哪里、点哪里、得到什么结果
+- 出错时知道下一步该怎么办
 
-- [Jobs-to-be-Done Template](jobs-to-be-done.md)
-- [Problem Framing Statement Template](framing-the-problem-statement.md)
-- [Customer Jobs Map Template](customer-jobs-map.md)
-- [Backlog Epic Hypothesis Template](backlog-epic-hypothesis.md)
+## 8. Next Suggested Actions
 
----
+完成 how-to 说明后，推荐进入以下任一步：
 
-## **Contributing**
-
-Want to add your own prompt? Please ensure:
-- All prompts are AI-directed.
-- Fallback questions are built in.
-- Structure is modular and markdown-formatted.
-- Prompts solve a real problem for product managers, teams, or educators.
-
----
-
-## **License**
-
-This repository and its contents are licensed under the MIT License, allowing free use, modification, and distribution with proper attribution.
+1. 嵌入截图，形成完整 `User_Guide.md`
+2. 合并到 `04_Prototype_Notes.md` 的演示说明部分
+3. 提炼成 demo 讲解备注或 FAQ

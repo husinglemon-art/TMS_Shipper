@@ -1,143 +1,125 @@
-## Executive Insights Company Profile Template
+# Company Research
 
-<!--
-## Description:
-Builds a structured company profile from executive and product perspectives
-using a stable output template that PMs can reuse in strategy and discovery.
+## 1. Purpose
 
-## Usage Note:
-Assumes context is already present in session.
+本 skill 用于帮助 **B 端供应链系统产品经理** 做竞品或标杆产品扫描，不是写大而全的公司画像，而是为以下问题服务：
 
-## Required Context Keys:
-1. Company identity and relevant business scope
-2. Purpose of the profile (strategy, discovery, competitive review, etc.)
-3. Time range or recency expectations for executive signals
-4. Available evidence (quotes, filings, product updates, analyst notes)
+- 这个产品在供应链链路里解决什么问题？
+- 它的核心流程是怎么组织的？
+- 它在哪些环节做得更强？
+- 它有哪些明显缺口、限制或体验问题？
+- 哪些点值得放进我们的 demo 里借鉴或刻意避开？
 
-## Missing Context Rule:
-If required keys are missing, ask at most 3 targeted questions, one at a time:
-1. "Which company and business segment should this profile focus on?"
-2. "What decision should this profile help inform?"
-3. "What time range should we use for executive signals and product updates?"
-Then proceed with clearly labeled assumptions.
+## 2. Default Context
 
-## Instructions:
-1. Preserve the canonical profile section order exactly.
-2. Use evidence-based language and cite context artifacts when available.
-3. Label inferred points as assumptions when evidence is weak.
-4. Keep insights directly useful for product decisions.
-5. Unless instructed otherwise, render output in Markdown.
+默认适用于以下研究对象：
 
-## Pedagogic Notes:
-- This teaches PMs to connect executive narrative to product implications.
-- Structured executive quotes reveal strategic alignment or inconsistency.
-- Stable section structure improves repeatability across company analyses.
+- 物流与运输管理系统
+- 仓储与库存管理系统
+- 调度与运力协同系统
+- 订单履约与异常跟踪系统
+- 采购、对账、结算、供应链协同平台
 
-## Attribution:
-Executive Insights Company Profile Template created by Dean Peters.
+默认研究目标不是“做一篇公司介绍”，而是支持：
 
-## Licensing:
-MIT License
+- `02_Competitor_Research.md`
+- demo 场景选型
+- 页面结构借鉴
+- 差异化方案判断
 
-Date: March 2, 2026
--->
+## 3. Core Questions
 
-## Context
+做研究时，优先回答以下 6 个问题：
 
-You are a product strategy research assistant creating an executive-insights
-company profile. Assume context is present. If required context is missing, ask
-up to 3 targeted questions (one at a time), then continue with assumptions
-clearly labeled.
+1. 这个产品的目标用户是谁？
+2. 它主要覆盖供应链的哪个环节？
+3. 它最核心的 1 到 3 个业务闭环是什么？
+4. 它在流程效率、异常处理、协同链路上有什么亮点？
+5. 它有哪些体验缺点、边界限制或典型槽点？
+6. 对我们的 demo 来说，哪些值得借鉴，哪些要刻意避开？
 
-## Output Format
+## 4. Required Inputs
 
-Use this exact structure:
+使用前尽量明确：
 
-## Executive Insights Company Profile Template
+- 要研究的产品或公司名称
+- 要对比的业务环节
+- 本次研究要支持什么决策
 
-### Company Overview
+如果信息不全，最多补问 3 个问题，优先问：
 
-**Basic Information:**
-* **Name:** [Insert the official name of the company]
-* **Headquarters:** [Insert the location of the headquarters]
-* **Industry:** [List the primary industries the company operates within]
+1. 本次要重点看哪个供应链环节？
+2. 这次研究是为了访谈准备、PRD 编写，还是 demo 借鉴？
+3. 你最想看的是流程设计、页面结构，还是异常处理？
 
-**Brief History:**
-* [Highlight the key historical milestones that shaped the company's current market position]
+## 5. Output Structure
 
-### Executive Quotes on Strategic Vision
+输出时使用以下结构：
 
-**Quote from the CEO:**
-* [Provide a recent quote from the CEO discussing the company's long-term vision and market approach]
+```markdown
+## 竞品扫描卡
 
-**Quote from the COO:**
-* [Provide a recent quote from the COO focusing on operational strategies and challenges]
+### 1. 基本信息
+- 产品/公司名称：
+- 所属领域：
+- 主要用户：
+- 对应供应链环节：
 
-**Quote from the VP of Product Management:**
-* [Provide a recent quote from the VP of Product Management detailing the product strategy and innovation focus]
+### 2. 核心业务闭环
+- 闭环 1：
+- 闭环 2：
+- 闭环 3：
 
-**Quote from the Group Product Manager:**
-* [Provide a recent quote from the Group Product Manager discussing specific product initiatives and customer engagement strategies]
+### 3. 关键页面或能力
+- 页面/能力 1：
+- 页面/能力 2：
+- 页面/能力 3：
 
-### Detailed Product Insights
+### 4. 可借鉴点
+- 借鉴点 1：
+- 借鉴点 2：
+- 借鉴点 3：
 
-**Product Strategy Overview:**
-* [Describe the overall product strategy, emphasizing integration of market needs with technological capabilities]
+### 5. 风险与槽点
+- 风险点 1：
+- 风险点 2：
+- 风险点 3：
 
-**Recent Product Launches and Innovations:**
-* [List and describe recent product launches and innovations, noting their impact on the company’s market position]
+### 6. 对我们 demo 的启发
+- 建议保留：
+- 建议弱化：
+- 建议避免：
 
-### Transformation Strategies and Initiatives
+### 7. 证据来源
+- 来源 1：
+- 来源 2：
+- 来源 3：
 
-**Digital Transformation:**
-* [Describe the company's overall approach to digital transformation, emphasizing the integration of cutting-edge technology with existing business processes and goals]
+### 8. 待验证假设
+- 假设 1：
+- 假设 2：
+```
 
-**AI Transformation:**
-* [Explain how the company is incorporating AI into its core processes, product offerings, and market positioning]
+## 6. Writing Rules
 
-**Agile Transformation:**
-* [Detail the company's adoption of Agile methodologies, highlighting specific improvements in cross-functional collaboration, project management, and product delivery]
+- 优先写与供应链业务闭环直接相关的信息
+- 不要把篇幅浪费在无关的公司历史故事上
+- 不要只写“功能很多”“体验很好”这种空话，必须指出具体页面或流程点
+- 优先关注：时效、异常、协同、状态透明度、责任归属、数据一致性
 
-### Organizational Impact of Product Management
+## 7. Good Output Standard
 
-**Role of Product Management in Strategic Decisions:**
-* [Discuss how product management influences strategic decisions within the company]
+一个合格的竞品扫描结果，应该满足：
 
-**Cross-Functional Collaboration:**
-* [Outline the collaboration between product management and other departments, such as marketing, sales, and R&D]
+- 能快速判断对方产品主要覆盖哪一段链路
+- 能看出最关键的 1 到 3 个流程组织方式
+- 能指出可借鉴点和明显缺点
+- 能直接支持 `02_Competitor_Research.md` 或 demo 设计
 
-### Future Product Roadmap and Challenges
+## 8. Next Suggested Actions
 
-**Upcoming Product Initiatives:**
-* [Detail any planned product initiatives and how they align with the company’s strategic goals]
+完成竞品扫描后，推荐进入以下任一步：
 
-**Anticipated Market Challenges:**
-* [Identify potential market challenges and how the product management team plans to address them]
-
-### Product-Led Growth Insights
-
-**Implementation of PLG Strategies:**
-* [Describe how the company employs Product-Led Growth strategies to enhance customer acquisition, retention, and expansion]
-
-**Data-Driven Product Decisions:**
-* [Explain the role of data analytics in shaping product decisions and driving growth]
-
-### Evidence and Assumptions
-
-**Evidence Used:**
-* [List key artifacts, quotes, or data points used]
-
-**Assumptions to Validate:**
-* [Assumption 1]
-* [Assumption 2]
-* [Assumption 3]
-
-## Final Step
-
-Offer exactly 4 next options:
-1. Generate a PM executive briefing memo (Recommended)
-2. Generate a competitor-comparison profile against one peer
-3. Generate an executive quote matrix by strategic theme
-4. Generate product risks and opportunities for next 2 quarters
-
-Ask the user to reply with `1`, `2`, `3`, `4`, `1 and 2`, or a custom path.
+1. 合并进 `02_Competitor_Research.md`
+2. 抽取可借鉴页面结构，进入 `03_PRD_Initial.md`
+3. 把关键差异点转成 demo 要重点展示的能力

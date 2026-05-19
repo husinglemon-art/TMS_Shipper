@@ -1,133 +1,118 @@
-# user-story_ai-enhanced_prompt-template.md
-<!--
-## Description:
-Generates obstacle-aware, JTBD-grounded user stories with strict Gherkin
-acceptance criteria and proactive split recommendations for delivery readiness.
+# User Story Enhanced
 
-## Usage Note:
-Assumes context is already present in session.
+## 1. Purpose
 
-## Required Context Keys:
-1. Product/feature area and target persona
-2. User goal/JTBD and blocking obstacle
-3. Desired functional outcome and success signal
-4. Scope constraints or implementation guardrails
+本 skill 用于帮助 **B 端供应链系统产品经理** 把问题定义和竞品研究结论，继续压缩成可以进入 PRD 初稿和 demo 范围的“结构化需求卡”。
 
-## Missing Context Rule:
-If required keys are missing, ask at most 3 targeted questions, one at a time:
-1. "Who is the persona and what job are they trying to get done?"
-2. "What obstacle is blocking progress right now?"
-3. "What functional outcome proves this story delivers value?"
-Then proceed with clearly labeled assumptions.
+它的目标不是写一条教科书式的英文 user story，而是回答：
 
-## Instructions:
-1. Preserve the canonical 5-step output sequence.
-2. Keep user story language concrete and outcome-focused.
-3. Enforce strict Gherkin constraints (single scenario, one When, one Then).
-4. Recommend splitting when scope or logic is compound.
-5. Unless instructed otherwise, render output in Markdown.
-6. Enforce Acceptance Criteria alignment rules:
-   - Scenario must align with the `As a [user]` actor in the use case.
-   - `Given` steps are preconditions; use as many as needed.
-   - Use exactly one `When` aligned to `I want to`.
-   - Use exactly one `Then` aligned to `so that`.
-   - If multiple `When` or `Then` are required, flag a split signal and use
-     `user-story-splitting-prompt-template.md`.
+- 这次到底要给谁做
+- 这个角色要完成什么关键动作
+- 系统应该支持到什么边界
+- demo 需要展示到什么程度
+- 哪些内容这次先不做
 
-## Pedagogic Notes:
-- This prompt teaches quality story writing beyond "As a/I want" boilerplate.
-- Obstacle-aware framing improves product relevance and testability.
-- Split checks reduce oversized stories and delivery risk.
-- Scenario-user alignment prevents actor drift in acceptance criteria.
+## 2. Default Context
 
-## Attribution:
-Created by Dean Peters for AI-enhanced user story generation.
+默认适用于以下背景：
 
-## Licensing:
-MIT License
+- 你是 B 端供应链系统产品经理
+- 你当前在推进一个产品方案试验或 demo
+- 业务对象可能涉及：订单、运输、仓储、调度、异常、协同、对账、结算
+- 目标不是直接交开发排期，而是先形成结构清晰、范围受控的需求表达
 
-Date: March 2, 2026
--->
+## 3. Core Goal
 
-## Context
+本 skill 的核心目标是把需求整理成 4 层：
 
-You are an AI assistant helping a Product Owner or product team create clear,
-testable user stories. Assume context is present. If required context is
-missing, ask up to 3 targeted questions (one at a time), then continue with
-labeled assumptions.
+1. 角色是谁
+2. 角色要完成什么任务
+3. 系统要支持哪些关键动作
+4. 这次 demo 或版本明确不做什么
 
-## Output Format
+## 4. Required Inputs
 
-Use this exact structure:
+使用前尽量明确以下信息：
 
-## STEP 1: HUMAN READABLE STORY TITLE
+- 主要角色是谁
+- 当前核心问题是什么
+- 这个角色最关键的任务是什么
+- 本次 demo 或版本想证明什么价值
+- 有哪些边界明确不做
 
-### User Story [User Story Number ID]:
-- **Summary**: [brief, memorable, human-readable story title describing value to the persona]
+如果信息不全，最多补问 3 个问题，优先问：
 
-## STEP 2: USE CASE (Obstacle-Aware JTBD-Optimized Format)
+1. 本次最核心的岗位角色是谁？
+2. 这个角色这次最关键的业务动作是什么？
+3. 这次 demo 或版本最想证明的价值是什么？
 
-### Use Case
-**As a** [living-breathing persona within a specific context],
-**I [want | need | require | must be able to]** [desired outcome, goal, or result],
-**so that I can** [complete a specific job or functional objective],
-**but** [barrier, obstacle, and/or constraint].
+## 5. Output Structure
 
-## STEP 3: ACCEPTANCE CRITERIA (Gherkin Format - Strict Rules)
+输出时使用以下结构：
 
-### Acceptance Criteria
-Scenario: [Concise, human-readable title aligned to the `As a [user]` actor]
+```markdown
+## 结构化需求卡
 
-**Given** [one precondition that sets the stage]
-- And **Given** [another precondition that adds needed context]
-- And **Given** [additional preconditions as necessary]
-**When** [one atomic user action - singular]
-**Then** [one observable, testable outcome tied to the user's job or gain]
+### 1. 角色与场景
+- 角色：
+- 所在环节：
+- 当前任务：
 
-### Ground Rules
-- **One Scenario** only
-- **Given** steps are preconditions; add as many as needed
-- **Exactly One When** aligned to `I want to`
-- **Exactly One Then** aligned to `so that`
-- If multiple `When` or `Then` are needed, split using `user-story-splitting-prompt-template.md`
+### 2. 需求目标
+- 想完成什么：
+- 为什么现在要做：
+- 成功后体现什么价值：
 
-## STEP 4: FINAL OUTPUT + SPLIT CHECK
+### 3. 系统支持动作
+- 动作 1：
+- 动作 2：
+- 动作 3：
 
-Present:
-1. Use Case (Obstacle-Aware format)
-2. Acceptance Criteria (single Gherkin scenario)
+### 4. 关键规则
+- 规则 1：
+- 规则 2：
+- 规则 3：
 
-Then evaluate:
-- Does `When` or `Then` include compound logic?
-- Are multiple behaviors, roles, or jobs conflated?
+### 5. 异常与边界
+- 异常点 1：
+- 异常点 2：
+- 本次不做：
 
-If yes, recommend splitting:
+### 6. Demo 展示范围
+- demo 必展示：
+- demo 可弱化：
+- demo 暂不展示：
 
-### Recommendations
-Story may be too large. Recommend splitting:
-1. Story A - [narrowed behavior or use case #1]
-2. Story B - [narrowed behavior or use case #2]
+### 7. 一句话需求表达
+- [用一句话说清楚“谁在什么场景下，需要系统支持什么动作，从而达成什么业务结果”]
 
-## STEP 5 (OPTIONAL): DISRUPTIVE INNOVATION REWRITE
+### 8. 待验证点
+- 待验证 1：
+- 待验证 2：
+```
 
-If the story is only incremental, challenge the premise:
-- Can the problem be eliminated instead of optimized?
-- Can user effort be reduced or removed?
-- Can underserved users be better enabled?
+## 6. Writing Rules
 
-Offer a disruptive alternative if viable.
+- 优先用业务动作描述需求，不先写系统名词
+- 每次尽量聚焦 1 个核心角色和 1 条主闭环
+- 如果一个需求同时包含太多动作、太多角色或太多结果，必须主动拆分
+- 供应链场景下，优先关注：状态流、异常流、协同边界、责任归属、时效影响
+- 一份结构化需求卡应当能直接被用于 `03_PRD_Initial.md`
 
-### Assumptions to Validate
-- [Assumption 1]
-- [Assumption 2]
-- [Assumption 3]
+## 7. Good Output Standard
 
-## Final Step
+一个合格的结构化需求卡，应该满足：
 
-Offer exactly 4 next options:
-1. Generate Jira/ADO-ready ticket fields from this story (Recommended)
-2. Generate 3 split-story variants at different scope sizes
-3. Generate edge-case acceptance criteria extensions
-4. Generate test case stubs for QA handoff
+- 能一眼看出核心角色
+- 能看出主任务和关键动作
+- 能看出本次范围边界
+- 能看出 demo 需要重点演示的内容
+- 不会把多个需求糊成一个大杂烩
 
-Ask the user to reply with `1`, `2`, `3`, `4`, `1 and 2`, or a custom path.
+## 8. Next Suggested Actions
+
+完成结构化需求卡后，推荐进入以下任一步：
+
+1. 写入 `03_PRD_Initial.md`
+2. 转成页面结构与交互清单
+3. 继续拆成 demo 演示步骤

@@ -1,105 +1,127 @@
-# user-story-mapping.md
-<!--
-## Description:
-Uses Jeff Patton-inspired user story mapping to visualize the user journey and
-translate strategy into prioritized, deliverable work.
+# User Story Mapping
 
-## Usage Note:
-Assumes context is already present in session.
+## 1. Purpose
 
-## Required Context Keys:
-1. Target segment and persona
-2. Narrative/JTBD for the scenario being mapped
-3. Product/system scope boundaries
-4. Decision this map should inform (MVP cut, sequencing, release plan)
+本 skill 用于帮助 **B 端供应链系统产品经理** 把一组需求整理成“版本结构图”，用于回答：
 
-## Missing Context Rule:
-If required keys are missing, ask at most 3 targeted questions, one at a time:
-1. "Who is the target segment/persona for this map?"
-2. "What job or narrative are we mapping from the user's perspective?"
-3. "What decision should this story map help us make?"
-Then proceed with clearly labeled assumptions.
+- 这次版本或 demo 到底覆盖哪条业务主链路
+- 哪些模块是主干
+- 哪些步骤必须演示
+- 哪些能力可以后放
+- 版本边界怎么切最清楚
 
-## Instructions:
-1. Preserve the canonical map section order exactly.
-2. Keep activities, steps, and tasks actionable and user-centered.
-3. Prefer clear verbs and observable behaviors.
-4. Keep list items sticky-note sized: 4 to 8 words.
-5. Use ASCII characters only.
-6. Unless instructed otherwise, render output in Markdown in a code block.
+它的目标不是做一张纯方法论式的 story map，而是服务：
 
-## Pedagogic Notes:
-- Story mapping teaches flow-first thinking instead of feature-first thinking.
-- Stable structure improves cross-team planning and backlog alignment.
-- Explicit persona + narrative anchors reduce solution drift.
+- `03_PRD_Initial.md`
+- demo 范围切片
+- 版本优先级整理
+- 页面和模块拓扑规划
 
-## Attribution:
-Template adapted from Jeff Patton's user story mapping technique for
-AI-assisted integration by Dean Peters.
+## 2. Default Context
 
-## Licensing:
-MIT License
+默认适用于以下背景：
 
-Date: March 2, 2026
--->
+- 你是 B 端供应链系统产品经理
+- 你当前在规划一个 demo 或一个小版本
+- 业务链路可能涉及：登录、订单、仓储、运输、调度、异常、协同、对账、结算
+- 当前重点不是“列尽所有功能”，而是“切清楚版本主链路”
 
-## Context
+## 3. Core Goal
 
-You are a user-centric product strategy assistant facilitating a story mapping
-session. Assume context is present. If required context is missing, ask up to 3
-targeted questions (one at a time), then continue with labeled assumptions.
+本 skill 的核心目标是把需求从“散点功能”整理成 4 层：
 
-## Output Format
+1. 核心角色
+2. 业务主链路
+3. 关键步骤
+4. 当前版本切片
 
-Unless instructed otherwise, render Markdown in a code block using this exact structure:
+## 4. Required Inputs
 
-### Sticky-Note Rule (Required)
-- Keep each list item 4 to 8 words.
-- Use ASCII characters only.
+使用前尽量明确以下信息：
 
-## User Story Map Template
+- 这次版本或 demo 的核心角色是谁
+- 核心业务链路是什么
+- 想优先证明哪条价值
+- 哪些能力本次一定要进
+- 哪些能力本次明确不进
 
-### Who
+如果信息不全，最多补问 3 个问题，优先问：
 
-#### Segment:
-- [Specify the target segment]
+1. 这次要讲的主链路是哪一段供应链流程？
+2. 本次版本或 demo 最核心的角色是谁？
+3. 这次最想证明的业务价值是什么？
 
-#### Persona:
-- [Describe the persona and key characteristics]
+## 5. Output Structure
 
-### Backbone
+输出时使用以下结构：
 
-#### Narrative:
-- [Insert the concise narrative or JTBD objective]
+```markdown
+## 版本结构图
 
-#### Activities:
-1. [Describe Activity 1]
-2. [Describe Activity 2]
-3. [Continue as necessary for up to 5 activities]
+### 1. 核心角色
+- 角色：
+- 所在环节：
+- 关键任务：
 
-#### Steps:
-For [Activity 1]:
-- Step 1: [Detail Step 1 for Activity 1]
-- Step 2: [Detail Step 2 for Activity 1]
-- [Continue for 3 to 5 steps per activity]
+### 2. 业务主链路
+- 主链路名称：
+- 起点：
+- 终点：
 
-#### Tasks:
-For [Activity 1, Step 1]:
-- Task 1: [Detail Task 1 for Step 1 of Activity 1]
-- Task 2: [Detail Task 2 for Step 1 of Activity 1]
-- [Continue for 5 to 7 tasks per step]
+### 3. 关键步骤
+1. 步骤 1：
+2. 步骤 2：
+3. 步骤 3：
+4. 步骤 4：
 
-### Assumptions to Validate
-- [Assumption 1]
-- [Assumption 2]
-- [Assumption 3]
+### 4. 每步核心支持能力
+- 步骤 1 需要：
+- 步骤 2 需要：
+- 步骤 3 需要：
+- 步骤 4 需要：
 
-## Final Step
+### 5. 当前版本切片
+- 本次必须进入：
+- 本次建议进入：
+- 本次明确不进：
 
-Offer exactly 4 next options:
-1. Generate an MVP release slice from this story map (Recommended)
-2. Generate user stories for top-priority tasks
-3. Generate risk and dependency flags across activities
-4. Generate a stakeholder readout narrative from this map
+### 6. Demo 展示主线
+- 演示从哪里开始：
+- 演示必须经过哪些步骤：
+- 演示结束停在哪里：
 
-Ask the user to reply with `1`, `2`, `3`, `4`, `1 and 2`, or a custom path.
+### 7. 风险与依赖
+- 依赖 1：
+- 依赖 2：
+- 风险 1：
+- 风险 2：
+
+### 8. 一句话版本定义
+- [用一句话说清楚“这个版本围绕哪个角色、哪条链路、解决什么核心问题”]
+```
+
+## 6. Writing Rules
+
+- 先讲链路，再讲功能，不要反过来
+- 先切主线，再补支线，不要把所有模块同权展开
+- 当前版本只能有一条最强主线，避免 demo 失焦
+- 供应链场景下，优先关注：流转顺序、状态变化、责任边界、异常拦截、上下游协同
+- 一次 story mapping 的结果，应能直接支持页面拓扑和模块拆解
+
+## 7. Good Output Standard
+
+一个合格的版本结构图，应该满足：
+
+- 能快速看出主角色
+- 能快速看出主链路起点和终点
+- 能区分“必须进入”和“可以后放”的内容
+- 能直接指导 `03_PRD_Initial.md` 的结构设计
+- 能直接用于 demo 展示主线规划
+
+## 8. Next Suggested Actions
+
+完成版本结构图后，推荐进入以下任一步：
+
+1. 写入 `03_PRD_Initial.md` 的页面结构拓扑
+2. 转成模块清单和交互清单
+3. 继续拆成 demo 演示步骤和原型说明

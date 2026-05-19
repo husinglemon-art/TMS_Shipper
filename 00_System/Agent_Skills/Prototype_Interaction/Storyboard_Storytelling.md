@@ -1,95 +1,116 @@
-# storyboard-storytelling-prompt.md
-<!--
-## Description:
-Fast-track generator for a reusable 6-frame product storyboard narrative from
-existing session context, with minimal fallback intake when context is missing.
+# Storyboard Storytelling
 
-## Usage Note:
-This is the context-aware fast-track version in `/prompts` so PMs can stay in
-flow. Assume context is already present; if not, collect only minimal missing
-context and proceed.
+## 1. Purpose
 
-## Required Context Keys:
-1. Main persona and scenario context
-2. Core problem and escalation ("Oh Crap" moment)
-3. Solution introduction and breakthrough ("Aha" moment)
-4. Desired post-solution future state
+本 skill 用于帮助 **B 端供应链系统产品经理** 把一个功能或 demo，讲成一条清晰的业务故事线。
 
-## Missing Context Rule:
-If required keys are missing, ask at most 3 targeted questions, one at a time:
-1. "Who is the persona and what challenge are they facing?"
-2. "What is the high-stakes moment that makes change urgent?"
-3. "How does the solution change life for this persona afterward?"
-Then proceed with clearly labeled assumptions.
+它的目标不是画“插画故事板”，而是帮助你在 demo 演示、评审汇报或原型说明时回答这几个问题：
 
-## Instructions:
-1. Preserve the canonical 6-frame narrative sequence.
-2. Keep the story persona-first and concrete.
-3. Use visual language that can be translated into illustrations.
-4. If context is complete, generate immediately without extra discovery steps.
-5. If context is incomplete, ask only the minimum missing targeted question(s).
-6. Unless instructed otherwise, render in Markdown in a code block.
+- 谁在用这个功能
+- 这个人原来卡在哪里
+- 为什么这个问题值得马上解决
+- 我们的 demo 是怎么把问题接住的
+- 演示结束后，听众应该记住什么价值
 
-## Pedagogic Notes:
-- Storyboards teach causal narrative: problem -> tension -> intervention -> outcome.
-- Persona-first framing improves empathy and decision quality.
-- Stable frame structure supports repeatable communication artifacts.
+## 2. Default Context
 
-## Attribution:
-Created by Dean Peters, December 20, 2024.
+默认适用于以下背景：
 
-## Licensing:
-MIT License
+- 你是 B 端供应链系统产品经理
+- 演示对象可能是：老板、业务方、客户、内部评审团队
+- 演示内容通常围绕：订单、运输、仓储、调度、异常、协同、对账、结算
+- 演示目标通常不是“展示页面多精美”，而是“证明业务闭环成立”
 
-Date: March 2, 2026
--->
+## 3. Core Goal
 
-## Context
+本 skill 的核心目标是把 demo 讲成一条业务闭环：
 
-You are a product storytelling assistant generating a six-frame storyboard.
-Assume context is present and generate directly. If required context is missing,
-ask up to 3 targeted questions (one at a time), then continue with labeled
-assumptions.
+1. 先讲角色和任务
+2. 再讲旧流程的卡点
+3. 再讲问题带来的损失或风险
+4. 再讲 demo 如何解决
+5. 最后讲解决后的业务价值
 
-## Output Format
+## 4. Required Inputs
 
-Render Markdown in a code block using this exact structure:
+使用前尽量明确以下信息：
 
-## Generated 6-Frame Storyline
+- 本次 demo 讲给谁看
+- 主要角色是谁
+- 角色当前要完成什么任务
+- 原流程最痛的卡点是什么
+- demo 要重点展示哪 1 到 3 个关键动作
 
-**Frame 1: Introducing the Main Character**
-- [Main character, setting, and context]
+如果信息不全，最多补问 3 个问题，优先问：
 
-**Frame 2: The Problem Emerges**
-- [Challenge and effect on daily workflow/life]
+1. 本次 demo 的核心受众是谁？
+2. 你最想证明的业务价值是什么？
+3. 这次 demo 最关键的 1 到 3 个动作是什么？
 
-**Frame 3: The "Oh Crap" Moment**
-- [Escalation that creates urgency]
+## 5. Output Structure
 
-**Frame 4: The Solution Appears**
-- [How solution is introduced and initial reaction]
+输出时使用以下结构：
 
-**Frame 5: The "Aha" Moment**
-- [Breakthrough while using the solution]
+```markdown
+## Demo Storyline
 
-**Frame 6: Life After the Solution**
-- [Improved outcome and sustained value]
+### 1. 角色出场
+- 角色是谁：
+- 所在岗位：
+- 当前任务：
 
-**Optional Visual Elements**
-- [If style references are provided, use them]
-- [If no style is provided, default to fat-marker sharpie sketch style, minimal monochrome]
+### 2. 旧流程困境
+- 原流程怎么做：
+- 当前卡点：
+- 最痛的一步：
 
-### Assumptions to Validate
-- [Assumption 1]
-- [Assumption 2]
-- [Assumption 3]
+### 3. 风险升级点
+- 不解决会怎样：
+- 典型后果：
 
-## Final Step
+### 4. Demo 切入点
+- 我们从哪一步开始演示：
+- 为什么从这里开始：
 
-Offer exactly 4 next options:
-1. Generate a 6-frame storyboard image prompt (Recommended)
-2. Generate a voiceover script for presenting the storyboard
-3. Generate a one-page narrative for stakeholder readout
-4. Generate alternate storyboard variants for two other personas
+### 5. 核心演示动作
+- 动作 1：
+- 动作 2：
+- 动作 3：
 
-Ask the user to reply with `1`, `2`, `3`, `4`, `1 and 4`, or a custom path.
+### 6. 演示后的业务结果
+- 效率改善：
+- 协同改善：
+- 风险降低：
+
+### 7. 一句话收束
+- [用一句话总结这次 demo 证明了什么价值]
+
+### 8. 待验证点
+- 待验证 1：
+- 待验证 2：
+```
+
+## 6. Writing Rules
+
+- 优先讲业务，不先讲页面
+- 优先讲动作闭环，不堆页面名
+- 优先讲价值变化，不堆功能列表
+- 供应链场景下，优先强调：时效、异常、协同、状态透明、责任归属
+- 一场 demo 最好只突出 1 到 2 个核心价值，不要贪多
+
+## 7. Good Output Standard
+
+一个合格的 demo 故事线，应该满足：
+
+- 听众能快速理解角色和场景
+- 听众能理解为什么这个问题值得解决
+- 听众能跟上演示动作，不会迷失在页面跳转中
+- 演示结束后，听众能复述出核心业务价值
+
+## 8. Next Suggested Actions
+
+完成故事线后，推荐进入以下任一步：
+
+1. 写入 `04_Prototype_Notes.md` 的评审或演示说明
+2. 转成 demo 讲解口播脚本
+3. 抽取成汇报版的一页摘要

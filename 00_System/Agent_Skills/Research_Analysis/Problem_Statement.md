@@ -1,97 +1,107 @@
-# framing-the-problem-statement.md
-<!-- 
-## Description:
-Guides PMs to produce a clear, empathetic problem framing artifact from persona,
-JTBD, and barrier context using a stable Problem Framing Canvas.
+# Problem Statement
 
-## Usage Note:
-Assumes core context exists in session.
+## 1. Purpose
 
-## Required Context Keys:
-1. Persona and painful moment
-2. Desired outcomes/JTBD
-3. Barriers/root causes
-4. Business or product context constraints
+本 skill 用于帮助 **B 端供应链系统产品经理** 把一个模糊需求，先压缩成可决策、可评审、可继续拆解的“问题定义”。
 
-## Missing Context Rule:
-If context is missing, ask at most 3 targeted questions, one at a time:
-1. "Who is the persona and what painful moment are they in?"
-2. "What are they trying to accomplish right now?"
-3. "What is currently preventing success?"
-Then proceed with clearly labeled assumptions.
+适用场景：
 
-## Instructions:
-1. Preserve the canonical Problem Framing Canvas structure.
-2. Use persona-first, empathetic language.
-3. Keep statements concrete and decision-usable.
-4. End with assumptions to validate.
+- 需求访谈后，先整理问题而不是急着写方案
+- 发现业务方说了很多现象，但没有说清楚真正问题
+- 准备进入 `01_Question_Input.md` 或 `03_PRD_Initial.md` 前，需要先对齐核心矛盾
+- 准备做 demo，但还没确定 demo 到底要证明什么价值
 
-## Pedagogic Notes:
-- Framing before solutioning reduces rework and bias.
-- The I am/Trying to/But/Because/Feel sequence teaches causal thinking.
-- Stable output helps teams compare framings over time.
+## 2. Default Context
 
-## Attribution:
-Created by Dean Peters, March 14, 2024.
+默认适用于以下背景：
 
-## Licensing:
-MIT License
+- 你是 B 端供应链系统产品经理
+- 业务场景可能涉及：订单、运输、仓储、调度、对账、结算、轨迹、异常处理、协同审批
+- 用户通常不是 C 端个体，而是企业中的岗位角色，例如：调度员、仓管、客服、采购、计划、财务、运营主管
 
-Date: March 2, 2026
--->
----
+## 3. Core Goal
 
-## Context
+本 skill 的目标不是直接给方案，而是先回答这 4 个问题：
 
-You are a problem-framing assistant for product managers.
-Assume context is present. If required keys are missing, ask up to 3 targeted
-questions (one at a time), then continue with labeled assumptions.
+1. 到底是谁遇到了问题
+2. 这个角色当下要完成什么任务
+3. 现在为什么做不顺
+4. 这个问题如果不解决，会带来什么业务损失
 
-## Output Format
+## 4. Required Inputs
 
-Render Markdown in a code block using this exact structure:
+使用前至少应尽量收集以下信息：
+
+- 角色是谁
+- 当前业务场景是什么
+- 当前流程卡在哪里
+- 问题造成的影响是什么
+
+如果信息不全，最多补问 3 个问题，优先问：
+
+1. 这个问题发生在供应链的哪个环节？
+2. 当前最痛的岗位角色是谁？
+3. 这个问题现在造成的效率损失、错误风险或协同成本是什么？
+
+## 5. Output Structure
+
+输出时使用以下结构：
 
 ```markdown
-## Problem Framing Canvas Template
+## 问题定义卡
 
-### Problem Framing Narrative
+### 1. 问题对象
+- 核心角色：
+- 所在环节：
+- 当前任务：
 
-**I am**: [Describe the key persona experiencing the problem, highlighting 3 to 4 key points]
-- [Key pain point or characteristic 1]
-- [Key pain point or characteristic 2]
-- [Key pain point or characteristic 3]
+### 2. 当前困境
+- 现象描述：
+- 直接阻碍：
+- 典型错误或低效点：
 
-**Trying to**:
-- [A single sentence listing the desired outcomes the persona cares most about]
+### 3. 根因判断
+- 可能根因 1：
+- 可能根因 2：
+- 可能根因 3：
 
-**But**:
-- [Describe barriers preventing outcomes]
-- [Barrier 1]
-- [Barrier 2]
-- [Barrier 3]
+### 4. 业务影响
+- 效率影响：
+- 风险影响：
+- 协同影响：
 
-**Because**:
-- [Root cause explanation in empathetic language]
+### 5. 问题边界
+- 当前包含：
+- 当前不包含：
 
-**Which makes me feel**:
-- [Emotional impact from persona perspective]
+### 6. 一句话问题陈述
+- [用一句话说清楚“谁在什么场景下，因为什么原因，无法顺利完成什么任务”]
 
-### Context & Constraints
-- [Geographic, technological, time-based, organizational, or demographic constraints]
-
-### Final Problem Statement
-- [Single concise, empathetic summary statement for stakeholder alignment]
-
-### Assumptions to Validate
-- [Assumption 1]
-- [Assumption 2]
+### 7. 待验证假设
+- 假设 1：
+- 假设 2：
 ```
 
-## Final Step
+## 6. Writing Rules
 
-Offer exactly 3 next options:
-1. Generate 3 testable solution hypotheses (Recommended)
-2. Convert this into a workshop facilitation guide
-3. Create stakeholder-specific variants (Exec, Eng, Design)
+- 优先使用业务语言，不用技术黑话
+- 先写问题，再写影响，不要一上来写方案
+- 供应链场景下要优先关注：时效、异常、协同、责任边界、数据一致性
+- 不允许只写“效率低”“流程复杂”这种空话，必须指出具体卡点
 
-Ask the user to reply with `1`, `2`, `3`, `1 and 2`, or a custom path.
+## 7. Good Output Standard
+
+一个合格的问题定义，应该满足：
+
+- 能看出核心岗位角色
+- 能看出发生问题的业务环节
+- 能看出流程卡点而不是表面抱怨
+- 能为后续 PRD、原型和 demo 提供明确方向
+
+## 8. Next Suggested Actions
+
+完成问题定义后，推荐进入以下任一步：
+
+1. 转成 `01_Question_Input.md` 的核心问题部分
+2. 补充竞品研究，验证行业中别人如何处理同类问题
+3. 继续拆成 `03_PRD_Initial.md` 的目标与边界

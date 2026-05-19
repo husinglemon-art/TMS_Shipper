@@ -1,115 +1,118 @@
-# jobs-to-be-done.md
-<!--
-## Description:
-Uses a stable Jobs-to-be-Done (JTBD) canvas to explore what customers are
-trying to achieve, where they struggle, and what outcomes they value most.
+# Jobs To Be Done
 
-## Usage Note:
-Assumes context is already present in session.
+## 1. Purpose
 
-## Required Context Keys:
-1. Target persona or segment
-2. Situation/context where progress is blocked
-3. Decision this JTBD analysis should inform
-4. Any evidence (interviews, support tickets, win/loss notes, analytics)
+本 skill 用于帮助 **B 端供应链系统产品经理** 分析一个岗位角色在真实业务流程中“到底要完成什么任务”，以及他为什么会卡住。
 
-## Missing Context Rule:
-If required keys are missing, ask at most 3 targeted questions, one at a time:
-1. "Who is the target persona and what situation are they in?"
-2. "What progress are they trying to make, and what is getting in the way?"
-3. "What decision should this JTBD analysis help us make?"
-Then proceed with clearly labeled assumptions.
+它的目标不是做泛化的消费者画像，而是帮助你看清：
 
-## Instructions:
-1. Preserve the canonical JTBD section order exactly.
-2. Keep language from the persona's point-of-view.
-3. Separate observed evidence from assumptions.
-4. Keep every bullet "sticky-note sized": 4 to 8 words per item.
-5. Use ASCII characters only.
-6. Unless instructed otherwise, render output in Markdown in a code block.
+- 这个岗位最关键的业务任务是什么
+- 任务发生在哪条供应链链路里
+- 哪一步最容易出错或卡住
+- 如果任务做不成，会产生什么业务后果
+- 这个任务最值得在 demo 里展示哪一段
 
-## Pedagogic Notes:
-- JTBD improves product decisions by focusing on progress, not features.
-- Distinguishing jobs, pains, and gains trains causal thinking.
-- Stable output supports reuse in discovery docs, PRDs, and story maps.
+## 2. Default Context
 
-## Attribution:
-Influenced by Osterwalder's Value Proposition Canvas, adapted for interactive
-AI-assisted use by Dean Peters, March 15, 2024.
+默认适用于以下背景：
 
-## Licensing:
-MIT License
+- 你是 B 端供应链系统产品经理
+- 角色通常不是个人消费者，而是企业岗位角色
+- 常见角色包括：调度员、仓管、客服、采购、计划、运营、财务、供应链主管
+- 常见流程包括：接单、分派、履约、入库、出库、异常处理、对账、结算、协同审批
 
-Date: March 2, 2026
--->
+## 3. Core Goal
 
-## Context
+本 skill 的核心目标是把一个岗位角色的任务拆成 4 层：
 
-You are a product discovery assistant running a Jobs-to-be-Done exercise.
-Assume context is present. If required context is missing, ask up to 3 targeted
-questions (one at a time), then continue with assumptions clearly labeled.
+1. 角色在做什么任务
+2. 任务发生在什么流程环节
+3. 当前卡点和代价是什么
+4. 如果系统支持得好，最应改善什么
 
-## Output Format
+## 4. Required Inputs
 
-Render Markdown in a code block using this exact structure:
+使用前尽量明确以下信息：
 
-### Sticky-Note Rule (Required)
-- Every bullet item must be 4 to 8 words.
-- Keep phrasing short and scannable.
-- Use ASCII characters only.
+- 核心岗位角色是谁
+- 当前业务流程在哪个环节
+- 角色最关键的任务是什么
+- 当前最痛的卡点是什么
+- 这个任务完成不好会造成什么损失
 
-## Jobs-to-be-Done Template
+如果信息不全，最多补问 3 个问题，优先问：
 
-### 1. Customer Jobs
+1. 当前最关键的岗位角色是谁？
+2. 他在供应链哪一段流程里最容易卡住？
+3. 这个卡点现在造成的效率、风险或协同损失是什么？
 
-#### Functional Jobs:
-- [Suggest multiple functional tasks customers need to perform]
+## 5. Output Structure
 
-#### Social Jobs:
-- [Suggest multiple ways customers want to be perceived socially]
+输出时使用以下结构：
 
-#### Emotional Jobs:
-- [Suggest multiple emotional states customers seek to achieve or avoid]
+```markdown
+## 岗位任务分析卡
 
-### 2. Pains
+### 1. 角色信息
+- 角色：
+- 所在环节：
+- 工作目标：
 
-#### Challenges:
-- [Suggest multiple obstacles customers face]
+### 2. 核心任务
+- 任务 1：
+- 任务 2：
+- 任务 3：
 
-#### Costliness:
-- [Suggest multiple instances of what customers find too costly in time, money, or effort]
+### 3. 当前卡点
+- 卡点 1：
+- 卡点 2：
+- 卡点 3：
 
-#### Common Mistakes:
-- [Suggest multiple examples of frequent errors customers make that could be prevented]
+### 4. 业务代价
+- 效率代价：
+- 风险代价：
+- 协同代价：
 
-#### Unresolved Problems:
-- [Suggest multiple problems not solved by current solutions]
+### 5. 任务完成标准
+- 任务完成意味着：
+- 好结果体现为：
 
-### 3. Gains
+### 6. 对系统的真实期望
+- 期望 1：
+- 期望 2：
+- 期望 3：
 
-#### Expectations:
-- [Suggest multiple ways current solutions fail to meet expectations]
+### 7. Demo 最值得展示的任务片段
+- 建议展示：
+- 不建议展示：
 
-#### Savings:
-- [Suggest multiple ways savings in time, money, or effort would delight customers]
+### 8. 待验证点
+- 待验证 1：
+- 待验证 2：
+```
 
-#### Adoption Factors:
-- [Suggest multiple factors that would increase the likelihood of adoption]
+## 6. Writing Rules
 
-#### Life Improvement:
-- [Suggest multiple ways a solution could make customers' lives easier or more enjoyable]
+- 优先写岗位任务，不先写功能按钮
+- 优先写流程动作，不先写系统术语
+- 供应链场景下，要特别关注：时效、异常、协同、责任归属、状态透明度
+- 不要只写“提高效率”，必须说明到底是哪一步效率低
+- 一个任务分析的结果，应能继续支撑问题定义、需求卡和版本结构图
 
-### Assumptions to Validate
-- [Assumption 1]
-- [Assumption 2]
-- [Assumption 3]
+## 7. Good Output Standard
 
-## Final Step
+一个合格的岗位任务分析，应该满足：
 
-Offer exactly 4 next options:
-1. Generate prioritized opportunity statements from this JTBD canvas (Recommended)
-2. Convert this into a value proposition draft
-3. Generate interview questions to validate top assumptions
-4. Generate a hypothesis backlog for rapid experiments
+- 能看出岗位角色的真实工作目标
+- 能看出任务发生在哪个流程环节
+- 能指出具体卡点，而不是泛泛抱怨
+- 能看出系统应该优先改善什么
+- 能帮助判断 demo 应该展示哪一段最值钱
 
-Ask the user to reply with `1`, `2`, `3`, `4`, `1 and 3`, or a custom path.
+## 8. Next Suggested Actions
+
+完成岗位任务分析后，推荐进入以下任一步：
+
+1. 继续压缩成 `Problem_Statement.md` 的问题定义
+2. 转成 `User_Story_Enhanced.md` 的结构化需求卡
+3. 合并进 `User_Story_Mapping.md` 做版本结构规划
