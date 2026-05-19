@@ -33,7 +33,7 @@ AI 必须严格遵守以下物理路径，严禁自行推测或创建根目录�
 - **📜 项目全局规则中心**：`00_System/Global_workflow_rules.md` (本文件)
 - **🏭 生产车间**：`00_System/01_Phase_Pipeline/` (Phase 1-9 SOP 脚本)
 - **🎭 专家人设**：`00_System/Agent_Roles/` (10 大专家人设)
-- **⚔️ skill库**：`00_System/Agent_Skills/` (31 项原子化技能)
+- **⚔️ skill库**：`00_System/Agent_Skills/` (16 项核心技能，采用语义化命名)
 - **📐 需求模具**：`00_System/Prd_Standard/` (PRD 总纲与组件规范)
 - **🛡️ 质量红线**：`00_System/Quality_Standards.md`
 - **🧠 全局真相**：`01_Master_Documents/` (全局 PRD、架构图、看板)
