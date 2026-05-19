@@ -18,5 +18,5 @@
   3. **捕获**：调用浏览器截图能力，截取当前视口 (Viewport) 的真实画面。
   4. **归档与嵌入**：
      - 图片强制命名规范：`step_[序号]_[动作英文].png`（例：`step_1_click_dispatch.png`）。
-     - 强制存入：`/02_Iterations/v[版本号]/Prototype_Archive/`。
+     - 强制存入：`/02_Iteration_Workspace/v[版本号]/Prototype_Archive/`。
      - 必须使用 `![操作指引](./Prototype_Archive/step_1_click_dispatch.png)` 语法无缝嵌入 `User_Guide.md`。

@@ -29,7 +29,7 @@
   1. **撰写高管战报 (Walkthrough)**：在对话中输出包含【核心亮点、业务价值、下一步建议】的中文结项报告，要带 Emoji 渲染气氛。
   2. **强制截图撰写指南 (Visual User Guide)**：
      - **绝对红线**：必须调用 `Browser` 插件或相关截图工具，访问当前的 Web 原型页面。
-     - **图文并茂**：截取关键操作的画面（保存到 `/02_Iterations/.../Prototype_Archive`），并在 `User_Guide.md` 中用 Markdown 语法嵌入图片。绝对不允许产出无图的指南。
+     - **图文并茂**：截取关键操作的画面（保存到 `/02_Iteration_Workspace/.../Prototype_Archive`），并在 `User_Guide.md` 中用 Markdown 语法嵌入图片。绝对不允许产出无图的指南。
 
 ## 4. 语言与沟通禁令 (Linguistic Red Lines)
 - **禁用词汇**：禁用任何纯开发视角的词汇。

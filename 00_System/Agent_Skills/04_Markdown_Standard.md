@@ -1,7 +1,7 @@
 # 🧰 技能档案：[Skill_Markdown] GFM 结构化排版与资产规范
 
 ## 1. 技能定位 (Definition)
-本技能是 [PM]、[QA] 和 [PMM] 等所有负责输出文档角色的基础武功。用于确保 `01_Master_SSOT` 和 `02_Iterations` 里的所有数字资产，呈现出高度统一、极具可读性的“大厂排版质感”。
+本技能是 [PM]、[QA] 和 [PMM] 等所有负责输出文档角色的基础武功。用于确保 `01_Master_Documents` 和 `02_Iteration_Workspace` 里的所有数字资产，呈现出高度统一、极具可读性的“大厂排版质感”。
 
 ## 2. 结构化排版红线 (Structural Red Lines)
 - **标题层级 (Hierarchy)**：严禁跳级使用标题（如从 `#` 直接跳到 `###`）。

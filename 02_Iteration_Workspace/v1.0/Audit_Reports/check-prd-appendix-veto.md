@@ -1,7 +1,7 @@
 # 🛡️ 11 号检察员质检报告 - Veto 死亡笔记 (Audit Reports)
 
 > **审计执行引擎**: `Agent_Roles/11_inspector`
-> **待检目标**: `PRD_Final.md (v1.0)`
+> **待检目标**: `05_PRD_Final.md (v1.0)`
 > **审计时间**: 2026-04-02 语言脱水执行期
 
 ---

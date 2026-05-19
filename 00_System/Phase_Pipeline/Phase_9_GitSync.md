@@ -21,7 +21,7 @@
 
 ### 🟡 动作 2：状态盘点 (Status Check)
 - **全量扫描**：执行 `git status`。
-- **资产清理**：AI 需自动甄别并排除无关冗余文件，确保只有 `/01_Master_SSOT`、`/02_Iterations` 和 `/03_Prototype_Web` 下的有效变更被纳入。
+- **资产清理**：AI 需自动甄别并排除无关冗余文件，确保只有 `/01_Master_Documents`、`/02_Iteration_Workspace` 和 `/03_Prototype_Assets` 下的有效变更被纳入。
 - **暂存指令**：执行 `git add .`。
 
 ### 🔴 动作 3：语义化提交 (Semantic Commit)
@@ -41,6 +41,6 @@
 - **结项报告**：若 Push 成功，AI 必须提取并输出 Git 返回的 **Commit Hash 摘要**。
 - **最终宣言**：
   > “🎉 **报告指挥官！**
-  > Trans_Wise v[当前版本号] 的所有代码、资产文档与架构图已安全同步至云端。
+  > TMS_Shipper v[当前版本号] 的所有资产文档与架构图已安全同步至云端。
   > 本次迭代全流水线（Phase 1 - Phase 9）已执行完毕，任务圆满达成！
   > **[版本状态：已落袋 🚀]** 您可以安心过周末了！”

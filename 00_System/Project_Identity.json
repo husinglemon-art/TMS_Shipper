@@ -1,9 +1,9 @@
 {
     "project_owner": "Easton", // 👈 项目负责人姓名（用于文档署名）
-    "project_name": "Trans_Shipper", // 👈 核心项目名称
+    "project_name": "TMS_Shipper", // 👈 核心项目名称
     "storage_hub": "Google_Drive", // 👈 明确存储中心为谷歌云盘
     "google_drive_config": {
-        "root_folder_name": "Trans_Shipper", // 👈 必须与你图片里的文件夹名完全一致
+        "root_folder_name": "TMS_Shipper", // 👈 必须与你图片里的文件夹名完全一致
         "sync_structure": {
             "prd": "01_PRD_Archive", // 👈 PRD 文档存放路径
             "ui_ux": "02_UI_UX_Design", // 👈 原型截图存放路径

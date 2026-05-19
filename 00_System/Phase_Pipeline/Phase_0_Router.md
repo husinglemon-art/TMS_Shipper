@@ -1,4 +1,4 @@
-# 🚦 Trans_Wise 总路由表与分发中心 (Phase Router)
+# 🚦 TMS_Shipper 总路由表与分发中心 (Phase Router)
 
 **【核心系统指令】**
 当指挥官 (Easton) 下达指令时，你必须首先查阅本路由表进行语义匹配，并静默挂载对应文件。
@@ -22,12 +22,12 @@
   - ➡️ **执行**：`01_Phase_Pipeline/Phase_3_InitialPRD.md`
 
 - **Phase 4 | 高保真原型开发 (Prototype Generation)**
-  - **触发特征**：写代码、写原型、UI 实现、前端交互开发、页面重构。
+  - **触发特征**：写原型说明、整理交互方案、补页面流、补展示资产、重构页面结构表达。
   - ⚠️ **前置分流拦截 (Crucial)**：
     - 在正式进入 Phase 4 之前，你必须**强制暂停**并向指挥官 Easton 确认使用的底层渲染引擎。
     - **询问话术**：“[系统日志：准备进入 Phase 4] Easton，关于本次高保真原型的生成，请指示路线：
-      - **路线 A (Antigravity 原生)**：由我直接在当前工作空间内编写 React + AntD 源码并处理深度逻辑。
-      - **路线 B (v0 快速构建)**：由您先在 v0.dev 生成初始 UI，再由我将代码接入本项目并进行状态机绑定。”
+      - **路线 A (Antigravity 原生)**：由我直接在当前工作空间内整理高保真原型说明、页面结构与交互细节。
+      - **路线 B (v0 快速构建)**：由您先在 v0.dev 或其他工具生成初始界面，再由我补充交互说明与文档缝合。”
   - ➡️ **执行分发**：
     - 若 Easton 选择 **路线 A**，去读取：`01_Phase_Pipeline/Phase_4A_Antigravity_Proto.md`
     - 若 Easton 选择 **路线 B**，去读取：`01_Phase_Pipeline/Phase_4B_v0_Integration.md`
@@ -37,8 +37,8 @@
   - ➡️ **执行**：`01_Phase_Pipeline/Phase_5_FinalPRD.md`
 
 ### [后期：资产闭环]
-- **Phase 6 | 源码物理归档**
-  - **触发**：代码快照、版本备份、封存代码、归档。
+- **Phase 6 | 原型资产归档**
+  - **触发**：原型快照、版本备份、封存展示资产、归档。
   - ➡️ **执行**：`01_Phase_Pipeline/Phase_6_Archive.md`
 
 - **Phase 7 | 交付报告与指南**
@@ -50,10 +50,10 @@
   - ➡️ **执行**：`01_Phase_Pipeline/Phase_8_SSOT_Merge.md`
 
 - **Phase 9 | Git 云端同步**
-  - **触发**：提交代码、Git Push、云端备份。
+  - **触发**：提交文档、提交资产、Git Push、云端备份。
   - ➡️ **执行**：`01_Phase_Pipeline/Phase_9_GitSync.md`
 
 ---
 
 ## 🛡️ 异常处理 (Fallback)
-若指令跨度过大（如“做调研顺便写代码”），必须拦截并询问：“检测到跨越 Phase 2 与 Phase 4，建议先从 Phase 2 开始。Easton，是否授权串行执行？”
+若指令跨度过大（如“做调研顺便补原型说明”），必须拦截并询问：“检测到跨越 Phase 2 与 Phase 4，建议先从 Phase 2 开始。Easton，是否授权串行执行？”

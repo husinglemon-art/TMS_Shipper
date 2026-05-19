@@ -3,7 +3,7 @@
 > ⚠️ **强制双端装载指令 (Dual-Role Pre-requisite)**
 > 在执行本阶段前，你必须静默读取并融合：
 > 1. `/02_Agent_Roles/03_ue.md` (资深交互体验专家：把控信息层级与微交互)
-> 2. `/02_Agent_Roles/04_staff.md` (资深前端研发专家：React + AntD 代码实现)
+> 2. `/02_Agent_Roles/04_staff.md` (资深交互原型专家：高保真页面结构与交互表达)
   3. `00_System/Prd_Standard/10_UI_Aesthetic_Standard.md` (👈 新增：美学红线)
 ---
 
@@ -17,12 +17,12 @@
 ---
 
 ## 🛑 技术栈红线 (Tech Stack Lock)
-- 严格使用 **Vite + React (Hooks) + Ant Design v5**。
+- 严格保持页面结构、状态流和交互层级的一致性。
 - 严禁引入未经允许的第三方库（如 Tailwind、MUI 等），必须保持工程纯净度。
 
 ## 🔄 执行动作：双核驱动组装 (Coding & UE Injection)
 
-### 🟢 动作 1：SaaS 骨架与代码实现 (Coding)
+### 🟢 动作 1：SaaS 骨架与原型表达
 - **标准布局**：采用经典的左侧 Sider + 顶部 Header + 自适应 Content 布局。
 - **品牌基因**：全局主题色强制设为 **Daybreak Blue (#1890ff)**。
 - **状态流转**：利用 `useState` 和 `useEffect` 实现基础的页面切换与弹窗交互，让原型“活”起来。
@@ -38,7 +38,7 @@
 
 ### 🔵 动作 4：环境激活与实时预览 (Environment Activation)
 - **自动指令**：代码输出完毕后，AI 必须立刻在终端执行：
-  `cd 03_Prototype_Web && npm run dev`
+  `打开 03_Prototype_Assets 中的当前原型并执行预览`
 - **目标**：确保 Vite 预览服务处于活跃状态，实现“代码落盘即预览”。
 
 ### 🔴 动作 5：红线对标质检 (Red Line Audit)
@@ -64,16 +64,16 @@
 ## 📦 本阶段交付物 (Deliverables)
 
 - **输出 1：实时预览 (Live View)**
-  - **路径**：`/03_Prototype_Web/src/App.tsx`
+  - **路径**：`/03_Prototype_Assets/`
   - **作用**：供指挥官在右侧预览区即时验收、点击、交互。
 
 - **输出 2：时空快照 (Time Machine Snapshot)**
-  - **路径**：`/02_Iterations/v[当前版本号]/Prototype_Archive/App_v[当前版本号].tsx`
+  - **路径**：`/02_Iteration_Workspace/v[当前版本号]/Prototype_Archive/`
   - **作用**：作为本版本的“数字木乃伊”永久封存。
   - **要求**：该文件必须与实时预览版完全一致，严禁任何字节偏差。
   
 
-- **全量覆盖禁令**：拒绝 `// ...此处省略`，两处路径均必须输出**完整可运行源码**。
+- **全量覆盖禁令**：拒绝 `// ...此处省略`，所有输出都必须完整表达页面结构、交互说明与资产路径。
 - **汇报与流转**：
   > “[系统日志：Phase 4A 渲染引擎已点火 🚀] 
   > 报告指挥官，原型已同步存入快照库。**本地开发服务已自动启动**，请在右侧预览区直接验收。确认体验丝滑后，是否授权进入 Phase 5？”

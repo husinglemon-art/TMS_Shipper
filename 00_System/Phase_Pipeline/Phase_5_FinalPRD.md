@@ -10,7 +10,7 @@
 ## 🔄 执行动作：三位一体流水线 (Execution Pipeline)
 
 ### 🟢 第一步：终版生产 (Production)
-- **动作**：基于 Phase 4 的代码实现，由 PM/QA 协同撰写 `PRD_Final.md`。
+- **动作**：基于 Phase 4 的原型实现，由 PM/QA 协同撰写 `05_PRD_Final.md`。
 - **规范**：强制执行“五栏式矩阵”，确保逻辑颗粒度达到指挥官要求的“商品发布流程”级别。
 
 ### 🔴 第二步：14 维度逻辑扫描 (Hard Audit - Skill 33)
@@ -32,8 +32,8 @@
 ## 📦 本阶段最终交付物 (Final Deliverables)
 
 - **物理存档**：
-  - `/02_Iterations/v[当前版本号]/PRD_Final.md` (已通过双重审计的纯净版)
-  - `/02_Iterations/v[当前版本号]/Audit_Reports/` (内含逻辑审计与语言审计的完整记录)
+  - `/02_Iteration_Workspace/v[当前版本号]/05_PRD_Final.md` (已通过双重审计的纯净版)
+  - `/02_Iteration_Workspace/v[当前版本号]/Audit_Reports/` (内含逻辑审计与语言审计的完整记录)
 
 ---
 

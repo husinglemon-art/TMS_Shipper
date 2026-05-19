@@ -24,9 +24,9 @@
 
 ### 🟡 动作 2：生成《图文用户指南 (User_Guide.md)》
 - **截图协议 (Crucial)**：
-  - AI 必须调用内置 **Browser/Web 工具**，访问当前运行的 `/03_Prototype_Web` 页面。
+  - AI 必须调用内置 **Browser/Web 工具**，访问当前原型对应的 `/03_Prototype_Assets` 页面或展示资产。
   - 在每个关键步骤（如：点击按钮后弹出弹窗、表单提交成功等）进行**真实截图**。
-  - 截图保存至：`/02_Iterations/v[当前版本号]/Prototype_Archive/stepX_xxx.png`。
+  - 截图保存至：`/02_Iteration_Workspace/v[当前版本号]/Prototype_Archive/stepX_xxx.png`。
 - **文档编写**：
   - 编写操作步骤，并使用 Markdown 语法嵌入对应的截图：`![操作说明](./Prototype_Archive/stepX_xxx.png)`。
 
@@ -34,7 +34,7 @@
 
 ## 📦 本阶段交付物 (Deliverables)
 
-- **交付文件**：`/02_Iterations/v[当前版本号]/User_Guide.md`
+- **交付文件**：`/02_Iteration_Workspace/v[当前版本号]/User_Guide.md`
 - **汇报与流转**：
   > “[系统日志：Phase 7 演示战报已送达 📄] 
   > 报告指挥官，业务价值提炼已完成，图文操作指南（含真实截图）已生成完毕。

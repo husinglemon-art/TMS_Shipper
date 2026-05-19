@@ -1,7 +1,7 @@
 # 📝 Phase 3: 需求初稿蓝图 (Initial PRD) - v1.0
 
 > **角色挂载**：[Lead] 资深产品架构师 & [Staff] 资深前端研发大佬
-> **项目名称**：Trans_Wise 微信小程序登录注册模块
+> **项目名称**：TMS_Shipper 微信小程序登录注册模块
 > **状态**：Draft (等待 Phase 4 渲染)
 
 ---

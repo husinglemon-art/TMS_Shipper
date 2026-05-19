@@ -1,7 +1,7 @@
 # 💡 11号检察员追加优化指南 (Guide Items)
 
 > **审计执行引擎**: `Agent_Roles/11_inspector`
-> **出具对象**: `PRD_Final.md (v1.0)`
+> **出具对象**: `05_PRD_Final.md (v1.0)`
 > ⚠️ 给接盘开发的忠告。我只关心落地和人机阻力。
 
 ---
