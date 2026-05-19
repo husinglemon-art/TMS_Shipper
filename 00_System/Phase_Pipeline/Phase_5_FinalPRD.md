@@ -2,7 +2,7 @@
 
 > ⚠️ **强制装载指令 (Sequential Execution)**
 > 1. **生产段**：装载 `/02_Agent_Roles/01_pm.md` 与 `05_qa.md`。
-> 2. **逻辑质检段**：装载 `Agent_Skills/PRD_Audit_Engine.md`。
+> 2. **逻辑质检段**：装载 `Agent_Skills/Governance_Audit/PRD_Audit_Engine.md`。
 > 3. **语言审计段**：装载 `/02_Agent_Roles/11_inspector.md`。
 
 ---

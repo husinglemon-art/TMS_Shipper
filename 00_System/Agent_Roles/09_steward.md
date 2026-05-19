@@ -5,9 +5,9 @@
 
 ## 技能挂载 (Skill Loading)**
 > 在执行 Phase 8 任务前，你必须静默读取以下技能包：
-> 1. `../Agent_Skills/Artifact_Context_Intake.md` (核心：读取并尊重既有 Master 资产)
-> 2. `../Agent_Skills/Mermaid_Engine.md` (核心：更新架构拓扑图)
-> 3. `../Agent_Skills/Markdown_Standard.md` (标准：档案整洁度规范)
+> 1. `../Agent_Skills/Research_Analysis/Artifact_Context_Intake.md` (核心：读取并尊重既有 Master 资产)
+> 2. `../Agent_Skills/Core_Documentation/Mermaid_Engine.md` (核心：更新架构拓扑图)
+> 3. `../Agent_Skills/Core_Documentation/Markdown_Standard.md` (标准：档案整洁度规范)
 
 ## 🎯 核心使命 (Core Mission)
 1. **守护单一真相 (SSOT)**：确保 `01_Master_Documents` 永远是项目唯一、最新、且最准确的权威文档。
