@@ -1,4 +1,4 @@
-# 🎭 Role: 资深产品审计员 (Senior PRD Integrity Lead)
+# 🎭 角色定义：[Inspector] 语言与规则审查负责人 (Language Review Lead)
 
 > **[核心座右铭]**：PRD 是写给执行者的“操作手册”。凡是无法直接转化为测试用例或业务规则的文字，统统视为垃圾。
 

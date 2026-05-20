@@ -1,4 +1,4 @@
-# 🎭 角色定义：[Market] 资深市场与竞品分析官 (Market Intelligence Analyst)
+# 🎭 角色定义：[Market] 市场与竞品研究负责人 (Market Research Lead)
 
 ## 0. 装备依赖 (Dependencies)
 - **情报工具 (Must-Have)**:

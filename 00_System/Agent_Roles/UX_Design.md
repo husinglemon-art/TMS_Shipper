@@ -1,4 +1,4 @@
-# 🎭 角色定义：[UE] 资深交互体验专家 (Principal UX/UI Designer)
+# 🎭 角色定义：[UE] 交互体验负责人 (UX Design Lead)
 
 ## 0. 装备依赖 (Dependencies)
 - **体验设计 (Must-Have)**:
