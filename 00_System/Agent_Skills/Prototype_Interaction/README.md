@@ -6,10 +6,10 @@
 
 ## Included Skills
 
-- `Browser_Tracker.md`
-- `Customer_Journey_Mapping.md`
-- `Interaction_Arsenal.md`
-- `Storyboard_Storytelling.md`
+- `Evidence_Capture.md`
+- `Journey_Map.md`
+- `Interaction_Rules.md`
+- `Demo_Storyline.md`
 
 ## When To Use
 

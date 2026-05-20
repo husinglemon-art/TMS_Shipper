@@ -113,6 +113,6 @@
 
 完成岗位任务分析后，推荐进入以下任一步：
 
-1. 继续压缩成 `Problem_Statement.md` 的问题定义
-2. 转成 `User_Story_Enhanced.md` 的结构化需求卡
-3. 合并进 `User_Story_Mapping.md` 做版本结构规划
+1. 继续压缩成 `Problem_Definition.md` 的问题定义
+2. 转成 `Requirement_Card.md` 的结构化需求卡
+3. 合并进 `Version_Map.md` 做版本结构规划

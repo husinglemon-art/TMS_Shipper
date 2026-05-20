@@ -1,4 +1,4 @@
-# HowTo
+# User Guide
 
 ## 1. Purpose
 

@@ -27,11 +27,11 @@
 
 ### Included Skills
 
-- `Core_Documentation/Markdown_Standard.md`
+- `Core_Documentation/Doc_Standard.md`
   - 用途：统一 Markdown 排版与结构质量
-- `Core_Documentation/HowTo.md`
+- `Core_Documentation/User_Guide.md`
   - 用途：输出操作说明、步骤说明、图文指引
-- `Core_Documentation/Mermaid_Engine.md`
+- `Core_Documentation/Diagram_Standard.md`
   - 用途：输出流程图、状态机、模块关系图
 
 ### Why Keep
@@ -52,17 +52,17 @@
 
 ### Included Skills
 
-- `Research_Analysis/Company_Research.md`
+- `Research_Analysis/Competitor_Research.md`
   - 用途：竞品与公司研究
-- `Research_Analysis/Problem_Statement.md`
+- `Research_Analysis/Problem_Definition.md`
   - 用途：问题定义与边界聚焦
-- `Research_Analysis/Jobs_To_Be_Done.md`
+- `Research_Analysis/Role_Task_Analysis.md`
   - 用途：用户任务与真实目标挖掘
-- `Research_Analysis/User_Story_Enhanced.md`
+- `Research_Analysis/Requirement_Card.md`
   - 用途：把需求整理成结构化用户故事
-- `Research_Analysis/User_Story_Mapping.md`
+- `Research_Analysis/Version_Map.md`
   - 用途：构建需求全景与版本拆分逻辑
-- `Research_Analysis/Artifact_Context_Intake.md`
+- `Research_Analysis/Context_Intake.md`
   - 用途：读取复杂原始材料并做结构化吸收
 
 ### Why Keep
@@ -83,13 +83,13 @@
 
 ### Included Skills
 
-- `Prototype_Interaction/Interaction_Arsenal.md`
+- `Prototype_Interaction/Interaction_Rules.md`
   - 用途：借鉴成熟的企业级交互模式
-- `Prototype_Interaction/Customer_Journey_Mapping.md`
+- `Prototype_Interaction/Journey_Map.md`
   - 用途：用户旅程与路径表达
-- `Prototype_Interaction/Storyboard_Storytelling.md`
+- `Prototype_Interaction/Demo_Storyline.md`
   - 用途：场景化表达与演示叙事
-- `Prototype_Interaction/Browser_Tracker.md`
+- `Prototype_Interaction/Evidence_Capture.md`
   - 用途：截图、页面记录、外部追踪与展示辅助
 
 ### Why Keep
@@ -110,11 +110,11 @@
 
 ### Included Skills
 
-- `Governance_Audit/Archive_Git_Guide.md`
+- `Governance_Audit/Version_Closeout.md`
   - 用途：版本归档与 Git 安全操作
-- `Governance_Audit/ISO29148_to_PRD.md`
+- `Governance_Audit/Requirement_Review.md`
   - 用途：对照标准反推需求完整性
-- `Governance_Audit/PRD_Audit_Engine.md`
+- `Governance_Audit/PRD_Review.md`
   - 用途：终稿审计、否决项与优化项输出
 
 ### Why Keep
@@ -133,15 +133,15 @@
 
 如果后面要继续做极限瘦身，建议优先保留以下最小核心组合：
 
-- `Core_Documentation/Mermaid_Engine.md`
-- `Core_Documentation/Markdown_Standard.md`
-- `Research_Analysis/Problem_Statement.md`
-- `Core_Documentation/HowTo.md`
-- `Research_Analysis/Jobs_To_Be_Done.md`
-- `Research_Analysis/User_Story_Enhanced.md`
-- `Research_Analysis/User_Story_Mapping.md`
-- `Research_Analysis/Artifact_Context_Intake.md`
-- `Governance_Audit/PRD_Audit_Engine.md`
+- `Core_Documentation/Diagram_Standard.md`
+- `Core_Documentation/Doc_Standard.md`
+- `Research_Analysis/Problem_Definition.md`
+- `Core_Documentation/User_Guide.md`
+- `Research_Analysis/Role_Task_Analysis.md`
+- `Research_Analysis/Requirement_Card.md`
+- `Research_Analysis/Version_Map.md`
+- `Research_Analysis/Context_Intake.md`
+- `Governance_Audit/PRD_Review.md`
 
 说明：
 这 9 个可以视为“没有它们就很难完整跑通 PM 闭环”的最低骨架。

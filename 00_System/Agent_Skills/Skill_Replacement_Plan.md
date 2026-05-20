@@ -16,8 +16,8 @@
 
 1. 已完成瘦身
 2. 已完成分组
-3. 接下来按组替换
-4. 替换优先于新增
+3. 已完成首轮按组替换
+4. 接下来按需补充
 
 原因：
 
@@ -26,14 +26,14 @@
 
 ## 3. Replacement Priority
 
-建议按以下顺序推进：
+首轮替换已按以下顺序推进：
 
 1. `Research_Analysis/`
 2. `Prototype_Interaction/`
 3. `Core_Documentation/`
 4. `Governance_Audit/`
 
-原因：
+执行原因：
 
 - 前两组与你实际业务适配度关系最大
 - 后两组更偏基础设施和治理底座，替换成本更高
@@ -46,18 +46,20 @@
 
 当前文件：
 
-- `Company_Research.md`
-- `Problem_Statement.md`
-- `Jobs_To_Be_Done.md`
-- `User_Story_Enhanced.md`
-- `User_Story_Mapping.md`
-- `Artifact_Context_Intake.md`
+- `Competitor_Research.md`
+- `Problem_Definition.md`
+- `Role_Task_Analysis.md`
+- `Requirement_Card.md`
+- `Version_Map.md`
+- `Context_Intake.md`
 
-建议动作：
+当前状态：已完成首轮替换
 
-- 优先替换为更贴合你业务访谈方式的模板
-- 优先减少通用 Prompt 味，增加你的固定提问框架
-- 保留“问题定义”和“故事地图”两类核心能力
+替换结果：
+
+- 已贴合 B 端供应链岗位、流程和 demo 范围
+- 已减少通用 Prompt 味
+- 已形成问题定义、需求卡、版本结构图的主链路
 
 建议补充：
 
@@ -65,22 +67,24 @@
 - `Demo_Scope_Definition.md`
 - `Competitor_Scan_Checklist.md`
 
-替换优先级：高
+下一步优先级：中
 
 ### 4.2 Prototype_Interaction
 
 当前文件：
 
-- `Browser_Tracker.md`
-- `Customer_Journey_Mapping.md`
-- `Interaction_Arsenal.md`
-- `Storyboard_Storytelling.md`
+- `Evidence_Capture.md`
+- `Journey_Map.md`
+- `Interaction_Rules.md`
+- `Demo_Storyline.md`
 
-建议动作：
+当前状态：已完成首轮替换
 
-- 替换成更贴近你实际 demo 展示方式的模板
-- 如果你常用固定原型工具，可以围绕那个工具重写说明
-- 保留截图追踪、页面流表达和演示叙事三类核心能力
+替换结果：
+
+- 已贴合 demo 叙事、截图留痕和交互表达
+- 已形成岗位旅程图与演示故事线的组合
+- 已可直接支撑 `04_Prototype_Notes.md` 和 demo 说明
 
 建议补充：
 
@@ -88,47 +92,53 @@
 - `Demo_Walkthrough_Script.md`
 - `Screen_Review_Checklist.md`
 
-替换优先级：高
+下一步优先级：中
 
 ### 4.3 Core_Documentation
 
 当前文件：
 
-- `Markdown_Standard.md`
-- `HowTo.md`
-- `Mermaid_Engine.md`
+- `Doc_Standard.md`
+- `User_Guide.md`
+- `Diagram_Standard.md`
 
-建议动作：
+当前状态：已完成首轮替换
 
-- 这组不要大改结构，只建议局部增强
-- 它们已经是稳定底座，优先保证通用性
+替换结果：
+
+- 已贴合主档、PRD、图文说明和 demo 文档
+- 已形成较稳定的表达底座
+- 后续只建议局部增强，不建议大改
 
 建议补充：
 
 - `Document_Review_Checklist.md`
 - `Mermaid_Pattern_Library.md`
 
-替换优先级：中
+下一步优先级：中低
 
 ### 4.4 Governance_Audit
 
 当前文件：
 
-- `Archive_Git_Guide.md`
-- `ISO29148_to_PRD.md`
-- `PRD_Audit_Engine.md`
+- `Version_Closeout.md`
+- `Requirement_Review.md`
+- `PRD_Review.md`
 
-建议动作：
+当前状态：已完成首轮替换
 
-- 这一组先别急着替换
-- 等你实际跑过几轮 demo 版本后，再反向抽出更适合你的治理标准
+替换结果：
+
+- 已贴合版本收口、需求完整性检查和 PRD 审计
+- 已可直接服务主档治理和 demo 收口
+- 后续建议结合真实版本运行后再做第二轮微调
 
 建议补充：
 
 - `Master_Update_Checklist.md`
 - `Version_Closeout_Checklist.md`
 
-替换优先级：中低
+下一步优先级：中低
 
 ---
 
@@ -166,13 +176,10 @@
 
 ## 8. Current Recommendation
 
-如果下一步开始真正替换，我建议从这 3 个文件优先开始：
+首轮替换已经完成。
 
-1. `Research_Analysis/Company_Research.md`
-2. `Research_Analysis/Problem_Statement.md`
-3. `Prototype_Interaction/Storyboard_Storytelling.md`
+下一步不建议继续大面积改名或重写，而建议进入：
 
-原因：
-
-- 它们最容易根据你的 demo 用法快速定制
-- 替换后立刻能影响新版本实际产出质量
+1. 结合真实 demo 版本试跑
+2. 根据试跑结果补充新 skill
+3. 仅在发现明显不适配时做第二轮替换

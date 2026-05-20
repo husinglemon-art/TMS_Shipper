@@ -6,9 +6,9 @@
 
 ## Included Skills
 
-- `Markdown_Standard.md`
-- `HowTo.md`
-- `Mermaid_Engine.md`
+- `Doc_Standard.md`
+- `User_Guide.md`
+- `Diagram_Standard.md`
 
 ## When To Use
 

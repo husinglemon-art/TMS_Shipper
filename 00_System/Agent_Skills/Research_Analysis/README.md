@@ -6,12 +6,12 @@
 
 ## Included Skills
 
-- `Company_Research.md`
-- `Problem_Statement.md`
-- `Jobs_To_Be_Done.md`
-- `User_Story_Enhanced.md`
-- `User_Story_Mapping.md`
-- `Artifact_Context_Intake.md`
+- `Competitor_Research.md`
+- `Problem_Definition.md`
+- `Role_Task_Analysis.md`
+- `Requirement_Card.md`
+- `Version_Map.md`
+- `Context_Intake.md`
 
 ## When To Use
 

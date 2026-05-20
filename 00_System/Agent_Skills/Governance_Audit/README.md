@@ -6,9 +6,9 @@
 
 ## Included Skills
 
-- `Archive_Git_Guide.md`
-- `ISO29148_to_PRD.md`
-- `PRD_Audit_Engine.md`
+- `Version_Closeout.md`
+- `Requirement_Review.md`
+- `PRD_Review.md`
 
 ## When To Use
 

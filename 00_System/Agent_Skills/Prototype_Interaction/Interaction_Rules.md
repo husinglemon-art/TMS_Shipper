@@ -123,4 +123,4 @@
 
 1. 写入 `03_PRD_Initial.md` 的交互清单
 2. 写入 `04_Prototype_Notes.md` 的页面评审说明
-3. 与 `Storyboard_Storytelling.md` 结合，形成 demo 演示主线
+3. 与 `Demo_Storyline.md` 结合，形成 demo 演示主线

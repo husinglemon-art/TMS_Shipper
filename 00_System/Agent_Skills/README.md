@@ -32,10 +32,10 @@
 
 示例：
 
-- `Mermaid_Engine.md`
-- `Problem_Statement.md`
-- `User_Story_Mapping.md`
-- `PRD_Audit_Engine.md`
+- `Diagram_Standard.md`
+- `Problem_Definition.md`
+- `Version_Map.md`
+- `PRD_Review.md`
 
 说明：
 不再使用 `01_`、`02_` 这类流水号命名。
@@ -96,8 +96,8 @@
 
 ## 8. Current Status
 
-当前 skill 库已完成一轮精简。
+当前 skill 库已完成一轮精简与首轮替换。
 
 - 当前核心 skill 数量：`16`
 - 当前管理方式：职责分组 + 语义化命名
-- 当前目标：先瘦身，再按需补充
+- 当前目标：先试跑，再按需补充
