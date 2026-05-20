@@ -17,7 +17,7 @@
 
 优先使用：
 
-- `Global_Prd_Standard.md`
+- `Global_PRD_Standard.md`
 
 适用场景：
 
@@ -48,13 +48,13 @@
 ```text
 PRD_Standard/
 ├─ README.md
-├─ Global_Prd_Standard.md
+├─ Global_PRD_Standard.md
 └─ Pattern_Specs/
 ```
 
 ## 4. File Roles
 
-### `Global_Prd_Standard.md`
+### `Global_PRD_Standard.md`
 
 总纲文件。
 
@@ -78,7 +78,7 @@ PRD_Standard/
 
 建议默认顺序：
 
-1. 先用 `Global_Prd_Standard.md` 确定 PRD 结构
+1. 先用 `Global_PRD_Standard.md` 确定 PRD 结构
 2. 再根据页面内容进入 `Pattern_Specs/`
 3. 写完后再交给 `PRD_Check_Standard/` 做检查
 
@@ -98,6 +98,6 @@ PRD_Standard/
 
 ## 7. Maintenance Rule
 
-- 如果要调整 PRD 整体结构，优先改 `Global_Prd_Standard.md`
+- 如果要调整 PRD 整体结构，优先改 `Global_PRD_Standard.md`
 - 如果要增强具体页面写法，再改 `Pattern_Specs/`
 - 如果只是新增一个常用页面模式，可以在 `Pattern_Specs/` 中扩展，而不一定改总纲

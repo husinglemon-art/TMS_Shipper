@@ -41,7 +41,7 @@
 
 优先参考：
 
-- `Global_Prd_Check_Rule.md`
+- `Global_PRD_Check_Rule.md`
 - `Check_Dimensions/`
 
 ## 3. Directory Structure
@@ -52,7 +52,7 @@
 PRD_Check_Standard/
 ├─ README.md
 ├─ Quick_Check_Rule.md
-├─ Global_Prd_Check_Rule.md
+├─ Global_PRD_Check_Rule.md
 ├─ Check_Dimensions/
 ├─ check-prd-appendix-veto.md
 └─ check-prd-appendix-guide.md
@@ -70,7 +70,7 @@ PRD_Check_Standard/
 - 适合日常审查
 - 适合 demo 和版本收口
 
-### `Global_Prd_Check_Rule.md`
+### `Global_PRD_Check_Rule.md`
 
 深度参考总纲。
 
@@ -102,7 +102,7 @@ PRD_Check_Standard/
 建议默认顺序：
 
 1. 先看 `Quick_Check_Rule.md`
-2. 如果问题复杂，再进入 `Global_Prd_Check_Rule.md`
+2. 如果问题复杂，再进入 `Global_PRD_Check_Rule.md`
 3. 只有需要深入某个维度时，再打开 `Check_Dimensions/`
 4. 输出结果时，用 `veto` 和 `guide` 两类文件沉淀结论
 
@@ -121,5 +121,5 @@ PRD_Check_Standard/
 ## 7. Maintenance Rule
 
 - 如果后续继续精简审查体系，优先改 `Quick_Check_Rule.md`
-- 如果要维护完整参考标准，再改 `Global_Prd_Check_Rule.md` 和 `Check_Dimensions/`
+- 如果要维护完整参考标准，再改 `Global_PRD_Check_Rule.md` 和 `Check_Dimensions/`
 - 如果只是调整输出格式，优先改 `check-prd-appendix-veto.md` 和 `check-prd-appendix-guide.md`

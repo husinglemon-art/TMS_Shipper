@@ -165,7 +165,7 @@
 
 如果需要完整检查，再参考：
 
-- `Global_Prd_Check_Rule.md`
+- `Global_PRD_Check_Rule.md`
 - `Check_Dimensions/`
 - `check-prd-appendix-veto.md`
 - `check-prd-appendix-guide.md`
