@@ -4,7 +4,7 @@
 > 在执行本阶段前，你必须静默读取并融合：
 > 1. `Agent_Roles/UX_Design.md` (交互体验负责人：审查外部原型 UI 的合理性)
 > 2. `Agent_Roles/Prototype_Design.md` (原型与结构负责人：负责结构收敛、状态表达与原型缝合)
-> 3. `00_System/Prd_Standard/10_UI_Aesthetic_Standard.md` (👈 新增：美学红线)
+> 3. `00_System/PRD_Standard/10_UI_Aesthetic_Standard.md` (👈 新增：美学红线)
 
 ## 📸 视觉引导门禁 (Visual Gating)
 - **动作**：AI 必须停下并提示：“指挥官，请上传 [当前页面/模块] 的视觉参考图或手绘草图。”

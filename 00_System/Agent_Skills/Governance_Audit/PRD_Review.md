@@ -20,6 +20,7 @@
 - `04_Prototype_Notes.md`
 - 当前版本的 `Audit_Reports/`
 - 需要时对照 `01_Master_Documents/` 中的主档结构
+- 默认优先参考 `PRD_Check_Standard/Quick_Check_Rule.md`
 
 ## 3. Core Audit Questions
 
@@ -34,7 +35,7 @@
 
 ## 4. Audit Dimensions
 
-默认至少检查以下 6 个维度：
+默认优先检查 `Quick_Check_Rule.md` 中定义的 6 个核心维度：
 
 ### 4.1 角色与场景
 
@@ -115,3 +116,17 @@
 1. 修改 `05_PRD_Final.md`
 2. 修改 `04_Prototype_Notes.md`
 3. 将稳定结论回填到 `01_Master_Documents/`
+
+## 9. Escalation Reminder
+
+如果当前文档满足以下任一条件，应从快速审查升级为完整检查：
+
+- 准备正式封版
+- 准备合并主档
+- 已形成完整业务闭环
+- 涉及复杂架构、状态流或跨系统依赖
+- 需要面向更大范围团队做正式评审
+
+推荐提示语：
+
+> “当前版本已进入复杂版本或正式封版阶段，建议切换到完整检查模式。”

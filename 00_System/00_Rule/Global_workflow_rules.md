@@ -34,7 +34,7 @@ AI 必须严格遵守以下物理路径，严禁自行推测或创建根目录�
 - **🧭 流程脚本目录**：`00_System/Phase_Pipeline/` (Phase 1-9 SOP 脚本)
 - **🎭 角色定义目录**：`00_System/Agent_Roles/` (10 个核心角色)
 - **⚔️ skill库**：`00_System/Agent_Skills/` (16 项核心技能，采用语义化命名)
-- **📐 需求模具**：`00_System/Prd_Standard/` (PRD 总纲与组件规范)
+- **📐 需求模具**：`00_System/PRD_Standard/` (PRD 总纲与组件规范)
 - **🛡️ 质量红线**：`00_System/Quality_Standards.md`
 - **🧠 主档目录**：`01_Master_Documents/` (全局 PRD、架构图、看板)
 - **🧊 版本工作区**：`02_Iteration_Workspace/` (版本过程文件、原型记录、审计存档)

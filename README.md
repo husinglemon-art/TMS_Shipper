@@ -36,8 +36,8 @@ TMS_Shipper/
 - `Agent_Roles/`: 不同角色视角的职责定义
 - `Agent_Skills/`: 文档生成、审计、排版等技能模板
 - `Phase_Pipeline/`: 从需求访谈到归档的阶段流程
-- `Prd_Standard/`: PRD 编写标准
-- `Prd_Check_Standard/`: PRD 审计标准
+- `PRD_Standard/`: PRD 编写标准
+- `PRD_Check_Standard/`: PRD 审计标准
 - `Quality_Standards.md`: 质量红线
 - `Project_Identity.json`: 项目标识与归档配置
 
