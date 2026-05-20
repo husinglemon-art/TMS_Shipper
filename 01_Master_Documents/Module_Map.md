@@ -21,40 +21,28 @@
 
 | Module | Status | Purpose | First Version | Detail Source |
 | :--- | :--- | :--- | :--- | :--- |
-| Authentication Lobby | Active | 承接未登录用户并分流授权路径 | v1.0 | `PRD_Master.md` |
-| OTP Verification | Active | 校验短信验证码并完成放行 | v1.0 | `PRD_Master.md` |
-| Face Verification | Conditional | 在风险场景下执行二次安全校验 | v1.0 | `PRD_Master.md` |
-| Tenant Selection | Active | 处理多货主身份切换与唯一上下文确认 | v1.0 | `PRD_Master.md` |
-| Invitation Routing | Active | 处理邀请来源记录与自动归属 | v1.0 | `PRD_Master.md` |
-| First Order Recommendation | Deferred | 在邀请入驻后提供首单建议 | Next | `Decision_Log.md` |
+| TBD | Planned | TBD | TBD | TBD |
 
 ## 4. Module Relationship View
 
 ```mermaid
 graph TD
-    A[Authentication Lobby] --> B[OTP Verification]
-    A --> C[Invitation Routing]
-    B --> D[Tenant Selection]
-    D --> E[Business Workspace]
-    E -. Risk Trigger .-> F[Face Verification]
+    A[Module A] --> B[Module B]
 ```
 
 ## 5. Module Grouping
 
 ### 5.1 Access and Authentication
 
-- Authentication Lobby
-- OTP Verification
-- Face Verification
+- TBD
 
 ### 5.2 Identity and Routing
 
-- Tenant Selection
-- Invitation Routing
+- TBD
 
 ### 5.3 Future Enhancement
 
-- First Order Recommendation
+- TBD
 
 ## 6. Maintenance Rules
 
@@ -64,7 +52,7 @@ graph TD
 
 ## 7. Current Summary
 
-- Active Modules: 4
-- Conditional Modules: 1
-- Deferred Modules: 1
-- Source Base: `v1.0`
+- Active Modules: TBD
+- Conditional Modules: TBD
+- Deferred Modules: TBD
+- Source Base: TBD
