@@ -125,7 +125,30 @@
 - 当出现新命名需求时，优先更新本文件后再批量调整仓库内容
 - 若历史文档仍有旧命名，后续修改该文档时顺手清理
 
-## 9. Current Decision Summary
+## 9. Role Naming Rules
+
+角色目录：`00_System/Agent_Roles/`
+
+规则：
+
+- 角色文件名优先使用职责型命名，不使用编号命名
+- 角色文件名应尽量直接反映在 PM 模板工程中的职责
+- 当两个角色承担高度重叠职责时，优先合并角色，而不是保留多个缩写名称
+
+当前角色文件包括：
+
+- `Product_Lead.md`
+- `Market_Research.md`
+- `UX_Design.md`
+- `Prototype_Design.md`
+- `Quality_Review.md`
+- `Enablement.md`
+- `Master_Architect.md`
+- `Master_Steward.md`
+- `Version_Governance.md`
+- `Language_Review.md`
+
+## 10. Current Decision Summary
 
 - Repository Name: `TMS_Shipper`
 - Product Official Name: `TMS_Shipper`

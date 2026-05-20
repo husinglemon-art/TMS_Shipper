@@ -2,8 +2,8 @@
 
 > ⚠️ **强制双端装载指令 (Dual-Role Pre-requisite)**
 > 在执行本阶段前，你必须静默读取并融合：
-> 1. `/02_Agent_Roles/08_architect.md` (首席架构师：把控全局逻辑一致性与拓扑结构)
-> 2. `/02_Agent_Roles/09_steward.md` (数据资产管理员：负责 Master 档案的无损缝合与修订追溯)
+> 1. `Agent_Roles/Master_Architect.md` (主档架构负责人：把控全局逻辑一致性与拓扑结构)
+> 2. `Agent_Roles/Master_Steward.md` (主档资产管理员：负责 Master 档案的无损缝合与修订追溯)
 
 ---
 
@@ -40,4 +40,4 @@
   > 报告指挥官，v[当前版本号] 增量逻辑已完美缝合至全局档案。系统单一真相（SSOT）已同步至最新状态。
   > 架构图与进度看板已刷新。是否授权开启最终的 **Phase 9 (Git 自动同步)**？”
 
-- **后置动作**：按全局规则更新 `workthrough.md`。
+- **后置动作**：按全局规则更新工作记录。
