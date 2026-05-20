@@ -4,7 +4,7 @@
 > 在执行本阶段前，你必须静默读取并融合：
 > 1. `Agent_Roles/UX_Design.md` (交互体验负责人：把控信息层级与微交互)
 > 2. `Agent_Roles/Prototype_Design.md` (原型与结构负责人：把控高保真页面结构与交互表达)
-  3. `00_Playbook/PRD_Standard/Pattern_Specs/10_UI_Aesthetic_Standard.md` (美学红线)
+  3. `00_Playbook/PRD_Standard/Pattern_Specs/UI_Aesthetic.md` (美学红线)
 ---
 
 ## 📸 视觉引导门禁 (Visual Gating)
@@ -49,7 +49,7 @@
 ## 🔄 执行动作：轻量视觉表达优化 (Clean-Flow Injection)
 
 ### 🟢 动作 1：去框化布局组装 (Borderless Layout)
-- 遵循 `10_UI_Aesthetic_Standard.md`，移除沉重的实体边框。
+- 遵循 `UI_Aesthetic.md`，移除沉重的实体边框。
 - 使用 **Negative Space (负空间)** 进行逻辑分区，而非“画格子”。
 
 ### 🟡 动作 2：高保真数据与状态 (Dynamic Mocking)

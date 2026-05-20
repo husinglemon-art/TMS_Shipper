@@ -46,25 +46,25 @@
 
 ### 4.1 [具体页面名称]
 - **A. 查询过滤区 (Filter)**：
-  - **[参考手册]**：`./Pattern_Specs/01_Filter_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Filter.md`
 - **B. 数据展示列表 (Table)**：
-  - **[参考手册]**：`./Pattern_Specs/02_Table_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Table.md`
 - **C. 按钮与操作行为 (Action)**：
-  - **[参考手册]**：`./Pattern_Specs/03_Action_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Action.md`
 - **D. 录入表单与弹窗 (Form)**：
-  - **[参考手册]**：`./Pattern_Specs/04_Form_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Form.md`
 - **E. 详情描述区 (Detail)**：
-  - **[参考手册]**：`./Pattern_Specs/05_Detail_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Detail.md`
 - **F. 操作日志与轨迹 (Log)**：
-  - **[参考手册]**：`./Pattern_Specs/06_Log_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Log.md`
 - **G. 业务进度条 (Steps)**：
-  - **[参考手册]**：`./Pattern_Specs/07_Steps_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Steps.md`
 - **H. 统计看板卡片 (Dashboard)**：
-  - **[参考手册]**：`./Pattern_Specs/08_Dashboard_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Dashboard.md`
 - **I. 标签页切换 (Tab)**：
-  - **[参考手册]**：`./Pattern_Specs/09_Tab_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/Tab.md`
 - **J. 视觉表达与信息层级 (UI Aesthetic)**：
-  - **[参考手册]**：`./Pattern_Specs/10_UI_Aesthetic_Standard.md`
+  - **[参考手册]**：`./Pattern_Specs/UI_Aesthetic.md`
 
 ---
 
