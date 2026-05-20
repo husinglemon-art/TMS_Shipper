@@ -15,7 +15,7 @@
 ## 🔄 执行动作：云端落袋与防爆破 (Secure Push)
 
 ### 🟢 动作 1：身份预检与网络对齐 (Identity Injection)
-- **精准溯源**：AI 必须静默读取 `@00_System/.git_identity.json`。
+- **精准溯源**：AI 必须静默读取 `@00_Playbook/.git_identity.json`。
 - **配置注入**：确认当前提交身份与版本归属信息准确无误。
 - **链路检查**：根据环境自动配置 Git 代理，确保与远端仓库（GitHub/GitLab）的通信链路通畅。
 

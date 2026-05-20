@@ -127,7 +127,7 @@
 
 ## 9. Role Naming Rules
 
-角色目录：`00_System/Agent_Roles/`
+角色目录：`00_Playbook/Agent_Roles/`
 
 规则：
 

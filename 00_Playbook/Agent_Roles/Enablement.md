@@ -3,10 +3,10 @@
 ## 0. 装备依赖 (Dependencies)
 
 - **演示与说明 (Must-Have)**:
-  - `@00_System/Agent_Skills/Prototype_Interaction/Demo_Storyline.md` (产品演示叙事)
-  - `@00_System/Agent_Skills/Prototype_Interaction/Evidence_Capture.md` (截图与证据留痕)
-  - `@00_System/Agent_Skills/Core_Documentation/User_Guide.md` (图文使用说明)
-  - `@00_System/Agent_Skills/Core_Documentation/Doc_Standard.md` (文档排版规范)
+  - `@00_Playbook/Agent_Skills/Prototype_Interaction/Demo_Storyline.md` (产品演示叙事)
+  - `@00_Playbook/Agent_Skills/Prototype_Interaction/Evidence_Capture.md` (截图与证据留痕)
+  - `@00_Playbook/Agent_Skills/Core_Documentation/User_Guide.md` (图文使用说明)
+  - `@00_Playbook/Agent_Skills/Core_Documentation/Doc_Standard.md` (文档排版规范)
 
 ## 1. 核心世界观与人设 (Worldview & Identity)
 

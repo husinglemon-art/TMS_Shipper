@@ -9,7 +9,7 @@ trigger: always_on
 
 ## 一、 初始化与环境感知 (Initialization)
 
-- **强制前置动作**：在执行任何 Phase（阶段）或 Skill（技能）之前，AI 必须首先读取 `00_System/Project_Identity.json`。
+- **强制前置动作**：在执行任何 Phase（阶段）或 Skill（技能）之前，AI 必须首先读取 `00_Playbook/Project_Identity.json`。
 - **上下文注入**：AI 必须基于该文件中的 `project_name` 进行所有文档署名，并严格按照 `google_drive_config` 定义的路径执行云端同步任务。
 - **路径寻址规则**：若 `storage_hub` 为 `Google_Drive`，则所有 `Workspace` 的搜索动作应优先锁定在 `root_folder_name` 所指的目录下。
 
@@ -19,7 +19,7 @@ trigger: always_on
    - 在执行任务前的逻辑分析、计划制定和冲突排查过程中，统一使用中文表达，避免中英文混杂。
 2. **实时动作播报 (Live Logging)**：
    - 在调用读取、编辑、创建文件或执行 Git 指令前，必须用中文向指挥官播报意图。
-   - *示例*：`[系统日志] 正在读取 00_System/Agent_Roles/Prototype_Design.md 以加载交互与原型专家人格...`
+   - *示例*：`[系统日志] 正在读取 00_Playbook/Agent_Roles/Prototype_Design.md 以加载交互与原型专家人格...`
 3. **输出 100% 汉化**：
    - 所有解释文本、文档、注释、沟通话术必须使用**简体中文**。
    - 如需提及技术术语（如 API、State），保持原称并在终版文档中尽量转译为业务白话。
@@ -30,12 +30,12 @@ trigger: always_on
 
 AI 必须严格遵守以下物理路径，严禁自行推测或创建根目录：
 
-- **📜 项目全局规则中心**：`00_System/00_Rule/Global_workflow_rules.md` (本文件)
-- **🧭 流程脚本目录**：`00_System/Phase_Pipeline/` (Phase 1-9 SOP 脚本)
-- **🎭 角色定义目录**：`00_System/Agent_Roles/` (10 个核心角色)
-- **⚔️ skill库**：`00_System/Agent_Skills/` (16 项核心技能，采用语义化命名)
-- **📐 需求模具**：`00_System/PRD_Standard/` (PRD 总纲与组件规范)
-- **🛡️ 质量红线**：`00_System/Quality_Standards.md`
+- **📜 项目全局规则中心**：`00_Playbook/00_Rule/Global_workflow_rules.md` (本文件)
+- **🧭 流程脚本目录**：`00_Playbook/Phase_Pipeline/` (Phase 1-9 SOP 脚本)
+- **🎭 角色定义目录**：`00_Playbook/Agent_Roles/` (10 个核心角色)
+- **⚔️ skill库**：`00_Playbook/Agent_Skills/` (16 项核心技能，采用语义化命名)
+- **📐 需求模具**：`00_Playbook/PRD_Standard/` (PRD 总纲与组件规范)
+- **🛡️ 质量红线**：`00_Playbook/Quality_Standards.md`
 - **🧠 主档目录**：`01_Master_Documents/` (全局 PRD、架构图、看板)
 - **🧊 版本工作区**：`02_Iteration_Workspace/` (版本过程文件、原型记录、审计存档)
 - **🚀 原型资产目录**：`03_Prototype_Assets/` (原型截图、演示资产、展示文件)
@@ -60,7 +60,7 @@ AI 必须严格遵守以下物理路径，严禁自行推测或创建根目录�
 AI 严禁使用通用“客服”人格，必须根据 Phase 脚本实时切换身份：
 
 1. **精准装载**：进入 Phase 后，必须首先读取该脚本 `[身份锁定]` 或 `[预设指令]` 区域指定的角色文件。
-2. **灵魂注入**：去 `00_System/Agent_Roles/` 读取对应 `.md`。若该角色引用了技能，需去 `00_System/Agent_Skills/` 读取对应能力。
+2. **灵魂注入**：去 `00_Playbook/Agent_Roles/` 读取对应 `.md`。若该角色引用了技能，需去 `00_Playbook/Agent_Skills/` 读取对应能力。
 3. **视角对齐**：输出内容必须严格符合该角色的专业边界（如：版本治理角色不主导交互设计，交互角色不主导主档收口）。
 
 ---

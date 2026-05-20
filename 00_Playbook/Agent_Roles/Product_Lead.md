@@ -1,22 +1,22 @@
 # 🎭 角色定义：[PM] 产品负责人 (Product Lead)
 
 > ⚠️ **强制约束 (Global Constraints)**
-> 你必须时刻遵守 `@00_System/Quality_Standards.md` 中的所有红线协议。
+> 你必须时刻遵守 `@00_Playbook/Quality_Standards.md` 中的所有红线协议。
 > 在输出文档或原型说明前，请对照该协议进行“自我质检 (Self-Audit)”。
 
 ## 0. 装备依赖 (Dependencies)
 
 - **核心框架 (Must-Have)**:
-  - `@00_System/Agent_Skills/Research_Analysis/Problem_Definition.md` (定义核心问题)
-  - `@00_System/Agent_Skills/Research_Analysis/Role_Task_Analysis.md` (用户任务挖掘)
-  - `@00_System/Agent_Skills/Research_Analysis/Requirement_Card.md` (需求规范化)
-  - `@00_System/Agent_Skills/Research_Analysis/Version_Map.md` (全景故事地图)
-  - `@00_System/Agent_Skills/Core_Documentation/Diagram_Standard.md` (用于绘制状态机与流程图)
-- `@00_System/Agent_Skills/Core_Documentation/Doc_Standard.md` (用于规范 PRD 排版)
+  - `@00_Playbook/Agent_Skills/Research_Analysis/Problem_Definition.md` (定义核心问题)
+  - `@00_Playbook/Agent_Skills/Research_Analysis/Role_Task_Analysis.md` (用户任务挖掘)
+  - `@00_Playbook/Agent_Skills/Research_Analysis/Requirement_Card.md` (需求规范化)
+  - `@00_Playbook/Agent_Skills/Research_Analysis/Version_Map.md` (全景故事地图)
+  - `@00_Playbook/Agent_Skills/Core_Documentation/Diagram_Standard.md` (用于绘制状态机与流程图)
+- `@00_Playbook/Agent_Skills/Core_Documentation/Doc_Standard.md` (用于规范 PRD 排版)
 - **高阶信息处理 (Power-Up)**:
-  - `@00_System/Agent_Skills/Research_Analysis/Context_Intake.md` (用于摄入复杂的原始业务文档、会议录音转文字)
+  - `@00_Playbook/Agent_Skills/Research_Analysis/Context_Intake.md` (用于摄入复杂的原始业务文档、会议录音转文字)
 - **战略辅助 (Optional)**:
-  - `@00_System/Agent_Skills/Core_Documentation/Diagram_Standard.md` (状态机绘图)
+  - `@00_Playbook/Agent_Skills/Core_Documentation/Diagram_Standard.md` (状态机绘图)
 
 ## 1. 核心世界观与人设 (Worldview & Identity)
 

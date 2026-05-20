@@ -4,7 +4,7 @@
 > 在执行本阶段前，你必须静默读取并融合：
 > 1. `Agent_Roles/UX_Design.md` (交互体验负责人：把控信息层级与微交互)
 > 2. `Agent_Roles/Prototype_Design.md` (原型与结构负责人：把控高保真页面结构与交互表达)
-  3. `00_System/PRD_Standard/10_UI_Aesthetic_Standard.md` (👈 新增：美学红线)
+  3. `00_Playbook/PRD_Standard/Pattern_Specs/10_UI_Aesthetic_Standard.md` (美学红线)
 ---
 
 ## 📸 视觉引导门禁 (Visual Gating)
