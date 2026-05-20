@@ -1,97 +1,96 @@
 # PRD Master
 
-## 1. Document Positioning
+## 1. 文档定位
 
-这是产品主 PRD，用于沉淀跨版本稳定结论。
+本文件用于沉淀跨版本稳定下来的业务规则、模块定义和全局需求说明。
 
-- 记录已经确认的业务规则
-- 记录长期有效的页面与模块定义
-- 作为迭代版本文档合并后的官方主档
+适用原则：
 
-说明：
-临时讨论、未定稿方案、草稿性内容不应直接写入本文件。
+- 只写稳定结论
+- 不写临时草稿
+- 不写未定稿讨论
 
-## 2. Revision Log
+## 2. 修订记录
 
-| Date | Version | Updated Area | Summary | Owner |
+| 日期 | 版本 | 更新范围 | 更新说明 | 负责人 |
 | :--- | :--- | :--- | :--- | :--- |
-| TBD | TBD | TBD | Initialize master structure | TBD |
+| TBD | TBD | TBD | 初始化主档骨架 | TBD |
 
-## 3. Product Overview
+## 3. 产品概述
 
-### 3.1 Product Name
-- Chinese Name:
-- English Name:
-- Internal Short Name:
+### 3.1 产品名称
+- 中文名：
+- 英文名：
+- 内部简称：
 
-### 3.2 Product Goal
-- Core problem to solve:
-- Main target users:
-- Business value:
+### 3.2 产品目标
+- 核心要解决的问题：
+- 核心目标用户：
+- 业务价值：
 
-### 3.3 Product Boundary
-- Included scope:
-- Excluded scope:
+### 3.3 产品边界
+- 当前包含：
+- 当前不包含：
 
-## 4. User Roles
+## 4. 角色定义
 
-| Role | Description | Main Goal | Key Permissions |
+| 角色 | 说明 | 核心任务 | 关键权限或边界 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 5. Core Business Modules
+## 5. 核心模块
 
-### 5.1 Module Map
+### 5.1 模块总览
 
-| Module | Purpose | Current Status | First Introduced In |
+| 模块名称 | 作用 | 当前状态 | 首次进入版本 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-### 5.2 Module Details
+### 5.2 模块说明
 
-#### Module: TBD
-- Business purpose:
-- Trigger scenario:
-- Key user action:
-- Expected result:
-- Exception baseline:
+#### 模块：TBD
+- 业务目的：
+- 触发场景：
+- 核心动作：
+- 预期结果：
+- 异常基线：
 
-## 6. Global User Journey
+## 6. 全局旅程
 
 ```mermaid
 graph TD
-    A[User Entry] --> B[Core Workflow]
-    B --> C[Result or Next Module]
+    A[入口] --> B[核心主线]
+    B --> C[结果或下一模块]
 ```
 
-## 7. Global Business Rules
+## 7. 全局规则
 
-### 7.1 Identity and Access
-- Rule 1:
-- Rule 2:
+### 7.1 角色与访问
+- 规则 1：
+- 规则 2：
 
-### 7.2 Data and Status
-- Rule 1:
-- Rule 2:
+### 7.2 数据与状态
+- 规则 1：
+- 规则 2：
 
-### 7.3 Exception Handling Baseline
-- Rule 1:
-- Rule 2:
+### 7.3 异常与边界
+- 规则 1：
+- 规则 2：
 
-## 8. Cross-Module Dependencies
+## 8. 跨模块依赖
 
-| Module A | Module B | Dependency Type | Notes |
+| 模块 A | 模块 B | 依赖类型 | 说明 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 9. Open Decisions
+## 9. 待决事项
 
-| Topic | Current State | Next Action | Owner |
+| 主题 | 当前状态 | 下一步 | 负责人 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 10. Iteration Merge Record
+## 10. 版本合并记录
 
-| Iteration Version | Merge Status | Merge Scope | Notes |
+| 版本号 | 合并状态 | 合并范围 | 备注 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |

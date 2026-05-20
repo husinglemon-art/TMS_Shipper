@@ -1,23 +1,23 @@
-# Phase 5: PRD Final
+# 05 PRD 终稿
 
-## 1. Document Info
+## 1. 文档信息
 
-| Version | Date | Author | Change Summary | Reviewer |
+| 版本 | 日期 | 作者 | 修改说明 | 审核人 |
 | :--- | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD | TBD |
 
-## 2. Business Baseline
+## 2. 业务基线
 
-- Business objective:
-- Required constraint:
-- Experience baseline:
+- 业务目标：
+- 必要约束：
+- 体验基线：
 
-## 3. Screen or Module Details
+## 3. 页面或模块详情
 
-### 3.1 Scope
-- Scope description:
+### 3.1 范围说明
+- 范围描述：
 
-### 3.2 State Flow
+### 3.2 状态流
 
 ```mermaid
 stateDiagram-v2
@@ -27,25 +27,25 @@ stateDiagram-v2
     Processing --> Failed
 ```
 
-### 3.3 Interaction Details
-- Trigger:
-- System action:
-- User feedback:
+### 3.3 交互说明
+- 触发条件：
+- 系统动作：
+- 用户反馈：
 
-### 3.4 Exception Handling Matrix
+### 3.4 异常处理矩阵
 
-| Action | Trigger | System Response | Exact Feedback Copy |
+| 动作 | 触发条件 | 系统处理 | 精确反馈文案 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 4. Acceptance Summary
+## 4. 验收小结
 
 1. 
 2. 
 3. 
 
-## 5. Revision Notes
+## 5. 修订说明
 
-- Compared with initial PRD:
-- Main changes:
-- Final approval state:
+- 相比初稿：
+- 本次主要变化：
+- 当前审查状态：

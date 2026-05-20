@@ -1,31 +1,31 @@
-# Phase 4: Prototype Notes
+# 04 原型说明
 
-## 1. Prototype Overview
+## 1. 原型概览
 
-- Prototype type:
-- Tool used:
-- Owner:
-- Review date:
+- 原型类型：
+- 使用工具：
+- 负责人：
+- 评审日期：
 
-## 2. Screen List
+## 2. 页面清单
 
-- Screen 1:
-- Screen 2:
-- Screen 3:
+- 页面 1：
+- 页面 2：
+- 页面 3：
 
-## 3. Review Notes
+## 3. 评审记录
 
-- Confirmed interaction:
-- Revised interaction:
-- Pending issue:
+- 已确认交互：
+- 已调整交互：
+- 当前待定问题：
 
-## 4. Asset Links
+## 4. 资产链接
 
-- Figma or tool link:
-- Demo link:
-- Screenshot folder:
+- 原型链接：
+- demo 链接：
+- 截图目录：
 
-## 5. Summary
+## 5. 小结
 
-- Ready for final PRD:
-- Need another review round:
+- 是否可进入终版 PRD：
+- 是否需要再评审一轮：

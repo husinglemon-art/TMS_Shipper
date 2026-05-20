@@ -1,41 +1,41 @@
-# Phase 1: Question Input
+# 01 需求访谈记录
 
-## 0. Basic Info
+## 1. 基本信息
 
-- Project Name:
-- Version:
-- Date:
-- Owner:
+- 项目名称：
+- 版本号：
+- 日期：
+- 负责人：
 
-## 1. Core Alignment
+## 2. 核心对齐
 
-### 1.1 Business Goal
-- Target problem:
-- Expected business result:
-- Success metric:
+### 2.1 业务目标
+- 当前要解决的问题：
+- 预期业务结果：
+- 成功指标：
 
-### 1.2 User Path
-- Entry point:
-- Main workflow:
-- End state:
+### 2.2 用户路径
+- 入口：
+- 主流程：
+- 结束状态：
 
-### 1.3 Scope and Boundary
-- Included:
-- Excluded:
+### 2.3 范围与边界
+- 本次包含：
+- 本次不包含：
 
-### 1.4 Risks and Constraints
-- Dependency:
-- Constraint:
-- Open question:
+### 2.4 风险与限制
+- 依赖：
+- 限制：
+- 待确认问题：
 
-## 2. Data Alignment
+## 3. 数据对齐
 
-- Existing source:
-- New input:
-- Cross-team dependency:
+- 现有数据来源：
+- 需要新增输入：
+- 跨团队依赖：
 
-## 3. Summary
+## 4. 小结
 
-- Final problem statement:
-- Pending decisions:
-- Ready for next phase:
+- 当前问题定义：
+- 当前待决事项：
+- 是否可进入下一阶段：

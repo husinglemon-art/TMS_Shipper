@@ -1,43 +1,43 @@
-# Phase 2: Competitor Research
+# 02 竞品研究
 
-## 1. Research Goal
+## 1. 研究目标
 
-- Research topic:
-- Why this matters:
-- Decision to support:
+- 研究主题：
+- 为什么要看：
+- 本次要支撑什么决策：
 
-## 2. Competitor Snapshot
+## 2. 竞品快照
 
-| Competitor | Entry Flow | Key Interaction | What to Learn |
+| 竞品 | 入口流程 | 关键交互 | 可借鉴点 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 3. Interaction Comparison
+## 3. 交互对比
 
 ```mermaid
 graph TD
-    A[Our Current Idea] --> B[Key Decision]
-    C[Competitor Pattern] --> B
+    A[我们的当前思路] --> B[关键判断]
+    C[竞品模式] --> B
 ```
 
-## 4. Pitfall Audit
+## 4. 避坑审计
 
-- Pitfall 1:
-- Pitfall 2:
-- Pitfall 3:
+- 坑位 1：
+- 坑位 2：
+- 坑位 3：
 
-## 5. Differentiation Suggestions
+## 5. 差异化建议
 
 1. 
 2. 
 
-## 6. Source Tracking
+## 6. 来源记录
 
-- Source 1:
-- Source 2:
+- 来源 1：
+- 来源 2：
 
-## 7. Summary
+## 7. 小结
 
-- Main conclusion:
-- Recommended direction:
-- Ready for next phase:
+- 主要结论：
+- 推荐方向：
+- 是否可进入下一阶段：

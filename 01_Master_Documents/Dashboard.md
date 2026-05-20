@@ -1,34 +1,34 @@
 # Dashboard
 
-## 1. Project Status Overview
+## 1. 当前状态概览
 
-| Area | Current Status | Latest Note |
+| 区域 | 当前状态 | 最新说明 |
 | :--- | :--- | :--- |
-| Master PRD | In progress | Structure initialized |
-| Product Architecture | In progress | Structure initialized |
-| Iteration Workspace | Ready | Template prepared |
-| Prototype Assets | Ready | Directory prepared for reusable demo assets |
+| Master PRD | In progress | 主档骨架已准备 |
+| Product Architecture | In progress | 架构骨架已准备 |
+| Iteration Workspace | Ready | 版本模板已准备 |
+| Prototype Assets | Ready | 原型资产目录已准备 |
 
-## 2. Current Phase Board
+## 2. 当前版本看板
 
-| Version | Current Phase | Status | Owner | Next Step |
+| 版本 | 当前阶段 | 状态 | 负责人 | 下一步 |
 | :--- | :--- | :--- | :--- | :--- |
-| Template | Ready | Not started | TBD | Create next iteration when needed |
+| Template | Ready | Not started | TBD | 需要时创建下一个版本 |
 
-## 3. Risk Notes
+## 3. 风险提示
 
-- Main risk:
-- Dependency risk:
-- Documentation risk:
+- 主要风险：
+- 依赖风险：
+- 文档风险：
 
-## 4. Pending Decisions
+## 4. 待决事项
 
-| Topic | Owner | Due Date | Status |
+| 主题 | 负责人 | 预计时间 | 状态 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 5. Update Rules
+## 5. 更新规则
 
-- Update this file when a version changes phase status.
-- Update this file when a major risk appears or is removed.
-- Keep entries concise and decision-oriented.
+- 当版本阶段变化时更新本文件
+- 当出现新的风险或风险解除时更新本文件
+- 所有条目尽量简短、结果导向

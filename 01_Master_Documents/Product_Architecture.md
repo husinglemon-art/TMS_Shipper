@@ -1,61 +1,61 @@
 # Product Architecture
 
-## 1. Document Positioning
+## 1. 文档定位
 
-这是产品级架构文档，用于沉淀系统结构、模块关系、关键流程和依赖拓扑。
+本文件用于沉淀产品结构、模块关系、核心流程和依赖拓扑。
 
 说明：
 这里的“架构”以产品信息架构和业务关系为主，不要求写成研发部署文档。
 
-## 2. Revision Log
+## 2. 修订记录
 
-| Date | Version | Updated Area | Summary | Owner |
+| 日期 | 版本 | 更新范围 | 更新说明 | 负责人 |
 | :--- | :--- | :--- | :--- | :--- |
-| TBD | TBD | TBD | Initialize architecture structure | TBD |
+| TBD | TBD | TBD | 初始化架构骨架 | TBD |
 
-## 3. Architecture Scope
+## 3. 架构范围
 
-- Current product scope:
-- Covered business modules:
-- Out-of-scope areas:
+- 当前覆盖范围：
+- 当前模块范围：
+- 当前不包含：
 
-## 4. Product Topology
+## 4. 产品拓扑
 
 ```mermaid
 graph TD
-    A[User Entry Layer] --> B[Identity Layer]
-    B --> C[Business Module Layer]
-    C --> D[Result and Feedback Layer]
+    A[入口层] --> B[身份层]
+    B --> C[业务模块层]
+    C --> D[结果与反馈层]
 ```
 
-## 5. Module Relationship
+## 5. 模块关系
 
-| Module | Upstream | Downstream | Key Dependency |
+| 模块 | 上游 | 下游 | 关键依赖 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 6. Core Flows
+## 6. 核心流程
 
-### 6.1 Primary Flow
-
-```mermaid
-flowchart TD
-    A[Start] --> B[Main Action]
-    B --> C[Decision Point]
-    C --> D[Success]
-    C --> E[Fallback]
-```
-
-### 6.2 Exception Flow
+### 6.1 主流程
 
 ```mermaid
 flowchart TD
-    A[Trigger Exception] --> B[System Intercept]
-    B --> C[User Feedback]
-    C --> D[Retry or Manual Handling]
+    A[开始] --> B[核心动作]
+    B --> C[判断节点]
+    C --> D[成功结果]
+    C --> E[补充路径]
 ```
 
-## 7. State Management View
+### 6.2 异常流程
+
+```mermaid
+flowchart TD
+    A[异常触发] --> B[系统拦截]
+    B --> C[用户反馈]
+    C --> D[重试或人工处理]
+```
+
+## 7. 状态视图
 
 ```mermaid
 stateDiagram-v2
@@ -65,20 +65,20 @@ stateDiagram-v2
     InProgress --> Failed
 ```
 
-## 8. External Dependencies
+## 8. 外部依赖
 
-| Dependency | Type | Why Needed | Risk Note |
+| 依赖对象 | 类型 | 作用 | 风险说明 |
 | :--- | :--- | :--- | :--- |
 | TBD | TBD | TBD | TBD |
 
-## 9. Architecture Constraints
+## 9. 架构约束
 
-- Constraint 1:
-- Constraint 2:
-- Constraint 3:
+- 约束 1：
+- 约束 2：
+- 约束 3：
 
-## 10. Future Expansion Notes
+## 10. 后续扩展备注
 
-- Potential new module:
-- Potential dependency:
-- Potential structural impact:
+- 潜在新增模块：
+- 潜在新增依赖：
+- 可能的结构影响：

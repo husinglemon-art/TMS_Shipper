@@ -1,30 +1,30 @@
-# Phase 3: PRD Initial
+# 03 PRD 初稿
 
-## 1. Iteration Goals and Boundaries
+## 1. 本次目标与边界
 
-### 1.1 Goals
-- Goal 1:
-- Goal 2:
+### 1.1 本次目标
+- 目标 1：
+- 目标 2：
 
-### 1.2 Boundaries
-- Included:
-- Excluded:
+### 1.2 本次边界
+- 包含：
+- 不包含：
 
-## 2. Page Topology
+## 2. 页面拓扑图
 
 ```mermaid
 graph TD
-    A[Entry] --> B[Main Screen]
-    B --> C[Detail or Result]
+    A[入口] --> B[主页面]
+    B --> C[详情或结果]
 ```
 
-## 3. Feature and Interaction List
+## 3. 功能与交互清单
 
-| Page or Module | Core Interaction | Suggested UI Pattern |
+| 页面或模块 | 核心交互 | 推荐页面表达方式 |
 | :--- | :--- | :--- |
 | TBD | TBD | TBD |
 
-## 4. Mock Data Shape
+## 4. Mock 数据示例
 
 ```json
 {
@@ -35,14 +35,14 @@ graph TD
 }
 ```
 
-## 5. Acceptance Criteria
+## 5. 验收标准
 
 1. 
 2. 
 3. 
 
-## 6. Summary
+## 6. 小结
 
-- Key interaction locked:
-- Open issue:
-- Ready for next phase:
+- 当前已锁定内容：
+- 当前待补问题：
+- 是否可进入下一阶段：

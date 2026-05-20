@@ -7,7 +7,6 @@
 ## Structure
 
 - `_Template/`: 新版本模板
-- `v1.0/`: 当前已完成规范化的一轮版本示例
 
 ## Usage Rule
 
