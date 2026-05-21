@@ -8,6 +8,10 @@
 
 - `v1.0_Gemini_Canvas_Prompts.md`：适合结构化输入的 Gemini Canvas 提示词
 - `v1.0_Gemini_Canvas_Copy_Pack.md`：可直接复制到 Gemini Canvas 的最小投喂包
+- `v1.0_Gemini_Canvas_Screen1_Ready_To_Paste.md`：第一页可直接投喂的专用文档
+- `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`：第二页可直接投喂的专用文档
+- `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`：第三页可直接投喂的专用文档
+- `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`：第四页可直接投喂的专用文档
 
 ## Usage Suggestion
 
@@ -30,3 +34,7 @@
 - 同时保留中文说明和必要的中文对照，便于按中文习惯审阅和补充
 - 推荐实际使用方式：英文 brief 直接投喂工具，中文对照用于人工确认、复核和补充细节
 - 若你想减少拼装动作，优先直接使用 `v1.0_Gemini_Canvas_Copy_Pack.md`
+- 若你已经确定先做第一页，优先直接使用 `v1.0_Gemini_Canvas_Screen1_Ready_To_Paste.md`
+- 若你已经开始补主线中间页，优先直接使用 `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`
+- 若你已经进入推荐页生成，优先直接使用 `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`
+- 若你已经准备收口闭环页，优先直接使用 `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`
