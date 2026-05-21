@@ -67,10 +67,29 @@ graph TD
       "recommend_reason": "时效更优，但成本略高"
     }
   ],
+  "bid_results": [
+    {
+      "carrier_name": "远东供应链",
+      "bid_total": 3450,
+      "transit_hours": 9,
+      "capacity_status": "AVAILABLE",
+      "bid_rank": 1,
+      "bid_reason": "报价在可接受范围内，且可满足次日到货要求"
+    },
+    {
+      "carrier_name": "联运快线",
+      "bid_total": 3580,
+      "transit_hours": 8,
+      "capacity_status": "AVAILABLE",
+      "bid_rank": 2,
+      "bid_reason": "时效更优，但成本更高"
+    }
+  ],
   "dispatch_result": {
     "task_id": "TSK-20260520-001",
     "carrier_name": "顺达物流",
-    "status": "ASSIGNED"
+    "status": "ASSIGNED",
+    "trace_entry_hint": "后续可继续进入运输执行跟踪"
   }
 }
 ```
