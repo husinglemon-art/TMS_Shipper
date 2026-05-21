@@ -18,7 +18,7 @@
 - **自动补全**：若目录不存在，必须立刻自动创建，严禁因路径缺失报错中断。
 
 ### 🟡 动作 2：全量物理快照 (Byte-Level Snapshot)
-- **核心文件备份**：将 `/03_Prototype_Assets/` 下的核心原型文件或展示资产完整备份至上述 Archive 目录。
+- **核心文件备份**：将 `/02_Iteration_Workspace/v[当前版本号]/Prototype_Assets/` 下的核心原型文件或展示资产完整备份至上述 Archive 目录；如有跨版本共享资产依赖，再补充备份 `/03_Shared_Prototype_Assets/` 中的相关文件。
 - **关联资产绑定**：
   - 扫描并提取本版本引用的特定 Mock 数据文件（如 `mock_v[当前版本号].json`）。
   - 扫描并提取本版本特有的 CSS 或静态资源。

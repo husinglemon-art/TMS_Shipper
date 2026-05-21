@@ -89,7 +89,9 @@
 
 ## 6. Prototype Asset Naming Rules
 
-原型资产目录：`03_Prototype_Assets/`
+原型资产目录：`03_Shared_Prototype_Assets/`（跨版本共享）
+
+版本原型资产目录：`02_Iteration_Workspace/v[版本号]/Prototype_Assets/`（版本专属）
 
 建议命名方式：
 
@@ -154,4 +156,4 @@
 - Product Official Name: `TMS_Shipper`
 - Master Directory: `01_Master_Documents`
 - Iteration Directory: `02_Iteration_Workspace`
-- Prototype Directory: `03_Prototype_Assets`
+- Prototype Directory: `03_Shared_Prototype_Assets`

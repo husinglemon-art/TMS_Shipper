@@ -23,7 +23,7 @@
 
 - 原型链接：
 - demo 链接：
-- 截图目录：
+- 截图目录：`02_Iteration_Workspace/v[版本号]/Prototype_Assets/`
 
 ## 5. 小结
 

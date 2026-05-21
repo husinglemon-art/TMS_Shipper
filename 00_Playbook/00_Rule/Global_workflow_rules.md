@@ -38,7 +38,8 @@ AI 必须严格遵守以下物理路径，严禁自行推测或创建根目录�
 - **🛡️ 质量红线**：`00_Playbook/Quality_Standards.md`
 - **🧠 主档目录**：`01_Master_Documents/` (全局 PRD、架构图、看板)
 - **🧊 版本工作区**：`02_Iteration_Workspace/` (版本过程文件、原型记录、审计存档)
-- **🚀 原型资产目录**：`03_Prototype_Assets/` (原型截图、演示资产、展示文件)
+- **🚀 共享原型资产目录**：`03_Shared_Prototype_Assets/` (跨版本共享的原型截图、演示资产、展示文件)
+- **🧩 版本原型资产目录**：`02_Iteration_Workspace/v[版本号]/Prototype_Assets/` (当前版本专属的页面说明、截图、prompt 和落图材料)
 
 ---
 

@@ -21,7 +21,7 @@
 
 ### 🟡 动作 2：状态盘点 (Status Check)
 - **全量扫描**：执行 `git status`。
-- **资产清理**：AI 需自动甄别并排除无关冗余文件，确保只有 `/01_Master_Documents`、`/02_Iteration_Workspace` 和 `/03_Prototype_Assets` 下的有效变更被纳入。
+- **资产清理**：AI 需自动甄别并排除无关冗余文件，确保只有 `/01_Master_Documents`、`/02_Iteration_Workspace` 和 `/03_Shared_Prototype_Assets` 下的有效变更被纳入。
 - **暂存指令**：执行 `git add .`。
 
 ### 🔴 动作 3：语义化提交 (Semantic Commit)

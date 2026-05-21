@@ -80,7 +80,8 @@
 
 推荐存放位置：
 
-- `03_Prototype_Assets/`
+- `02_Iteration_Workspace/v[版本号]/Prototype_Assets/`
+- `03_Shared_Prototype_Assets/`
 - `02_Iteration_Workspace/v[版本号]/Prototype_Archive/`
 
 如果是版本内演示记录，优先放到版本目录中。

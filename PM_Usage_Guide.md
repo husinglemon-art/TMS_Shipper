@@ -53,9 +53,9 @@
 说明：
 这里主要看，不建议把临时草稿直接写进来。
 
-### `03_Prototype_Assets/`
+### `03_Shared_Prototype_Assets/`
 
-这是原型展示资产目录。
+这是跨版本原型展示资产目录。
 
 你会在这里放：
 
@@ -63,6 +63,10 @@
 - 页面流图
 - 原型链接说明
 - 演示材料
+
+说明：
+
+- 如果这些材料强绑定某个版本，优先放到 `02_Iteration_Workspace/v[版本号]/Prototype_Assets/`
 
 ### `00_Playbook/`
 
@@ -88,8 +92,11 @@
    - `03_PRD_Initial.md`
    - `04_Prototype_Notes.md`
    - `05_PRD_Final.md`
-4. 如有审计补充内容，放入 `Audit_Reports/`
-5. 当本版本稳定后，再把结论合并到 `01_Master_Documents/`
+4. 若需要原型工具资料，在 `Prototype_Assets/` 中按工具建立子目录，例如 `Stitch/`、`Gemini_Canvas/`
+5. 在生成工具提示词或原型前，先确认当前要用哪种工具；默认推荐 `Stitch` 和 `Gemini_Canvas`，但也可以补充其他工具
+6. 如为保证效果使用英文 prompt，需同步保留中文说明或中英文对照版本
+7. 如有审计补充内容，放入 `Audit_Reports/`
+8. 当本版本稳定后，再把结论合并到 `01_Master_Documents/`
 
 ## 4. 每个文件应该写什么
 
@@ -131,6 +138,12 @@
 - 修改了什么
 - 还有什么没定
 - 原型链接或截图放在哪里
+
+补充原则：
+
+- 如果要进入原型生成阶段，应先确认当前使用哪种工具
+- 默认推荐工具为 `Stitch` 和 `Gemini_Canvas`
+- 若需要其他工具，也应在当前版本 `Prototype_Assets/` 下建立对应子目录统一管理
 
 ### `05_PRD_Final.md`
 
@@ -256,7 +269,8 @@
 
 - `02_Iteration_Workspace/vX.X/05_PRD_Final.md`
 - `02_Iteration_Workspace/vX.X/04_Prototype_Notes.md`
-- `03_Prototype_Assets/`
+- `02_Iteration_Workspace/vX.X/Prototype_Assets/`
+- `03_Shared_Prototype_Assets/`（如需查看跨版本共享展示资产）
 
 ## 10. 一句话使用原则
 

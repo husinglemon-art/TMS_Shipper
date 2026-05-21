@@ -26,7 +26,7 @@ TMS_Shipper/
 ├─ 00_Playbook/
 ├─ 01_Master_Documents/
 ├─ 02_Iteration_Workspace/
-├─ 03_Prototype_Assets/
+├─ 03_Shared_Prototype_Assets/
 └─ README.md
 ```
 
@@ -65,9 +65,9 @@ TMS_Shipper/
 说明：
 这里是日常工作的主战场，所有版本增量应先在这里完成，再决定是否合并进入主档。
 
-### `03_Prototype_Assets/`
+### `03_Shared_Prototype_Assets/`
 
-原型资产目录，用于保存非生产级的展示材料。
+跨版本原型资产目录，用于保存非生产级、可长期复用的展示材料。
 
 适合放入：
 
@@ -78,7 +78,7 @@ TMS_Shipper/
 - 历史方案归档
 
 说明：
-该目录不要求承载可部署代码工程。
+该目录不要求承载可部署代码工程。若资产强绑定某个版本，优先放到 `02_Iteration_Workspace/v[版本号]/Prototype_Assets/`。
 
 ## 推荐工作流
 
@@ -88,7 +88,7 @@ TMS_Shipper/
 2. 产出 `01_Question_Input.md`，完成需求访谈和边界确认
 3. 产出 `02_Competitor_Research.md`，完成竞品与差异化分析
 4. 产出 `03_PRD_Initial.md`，形成结构化需求蓝图
-5. 在 `03_Prototype_Assets/` 中补充原型相关材料
+5. 在 `02_Iteration_Workspace/v[版本号]/Prototype_Assets/` 中补充当前版本原型相关材料
 6. 产出 `05_PRD_Final.md` 和 `Audit_Reports/`
 7. 将稳定结论合并到 `01_Master_Documents/`
 

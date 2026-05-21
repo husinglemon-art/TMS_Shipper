@@ -35,7 +35,7 @@
 
 ### 🔵 动作 4：逻辑接管后的实时预览 (Live Preview)
 - **自动指令**：清洗与缝合完成后，AI 必须立刻执行：
-  `打开 03_Prototype_Assets 中的当前原型并执行预览`
+  `打开当前版本 Prototype_Assets 中的当前原型并执行预览`
 - **目标**：让外部原型资产在本地预览环境下快速可用。
 
 ### 🔴 动作 5：红线对标质检 (Red Line Audit)
@@ -60,7 +60,7 @@
 ## 📦 本阶段交付物 (Deliverables)
 
 - **输出 1：实时预览 (Live View)**
-  - **路径**：`/03_Prototype_Assets/`
+  - **路径**：`/02_Iteration_Workspace/v[当前版本号]/Prototype_Assets/`
   - **作用**：供指挥官在右侧预览区即时验收、点击、交互。
 
 - **输出 2：版本快照 (Version Snapshot)**

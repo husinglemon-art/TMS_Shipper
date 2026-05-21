@@ -23,7 +23,7 @@
 
 ### 🟡 动作 2：生成《图文用户指南 (User_Guide.md)》
 - **截图协议 (Crucial)**：
-  - AI 必须调用内置 **Browser/Web 工具**，访问当前原型对应的 `/03_Prototype_Assets` 页面或展示资产。
+  - AI 必须调用内置 **Browser/Web 工具**，优先访问当前版本对应的 `/02_Iteration_Workspace/v[版本号]/Prototype_Assets/` 页面或展示资产；若存在共享展示材料，再补充访问 `/03_Shared_Prototype_Assets/`。
   - 在每个关键步骤（如：点击按钮后弹出弹窗、表单提交成功等）进行**真实截图**。
   - 截图保存至：`/02_Iteration_Workspace/v[当前版本号]/Prototype_Archive/stepX_xxx.png`。
 - **文档编写**：
