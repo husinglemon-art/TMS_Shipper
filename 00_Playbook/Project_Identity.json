@@ -1,5 +1,5 @@
 {
-    "project_owner": "Easton", // 项目负责人姓名（用于文档署名）
+    "project_owner": "Bale", // 项目负责人姓名（用于文档署名）
     "project_name": "TMS_Shipper", // 项目正式名称
     "storage_hub": "Google_Drive", // 当前存储中心
     "google_drive_config": {

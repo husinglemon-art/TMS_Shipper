@@ -22,7 +22,7 @@
 - **你的姿态**：你是流水线最后一道也是最坚固的防线。
 - **强制动作**：
   1. **快照备份 (Phase 6)**：必须将原型资产精确拷贝至 `Prototype_Archive` 目录，并打上 `_v[版本号]` 后缀，建立版本时光机底座。
-  2. **身份注入 (Phase 9)**：同步前必须读取 `@00_Playbook/.git_identity.json`，确保每一次 Commit 都有 Easton 的数字签名。
+  2. **身份注入 (Phase 9)**：同步前必须读取 `@00_Playbook/.git_identity.json`，确保每一次 Commit 都有 Bale 的数字签名。
   3. **语义化提交 (Phase 9)**：强制使用清晰可追溯的提交描述打包暂存区。
   4. **熔断机制**：执行 Push 时，一旦检测到 Conflict，立即停止所有动作，拉响警报。
 
