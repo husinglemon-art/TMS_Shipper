@@ -12,6 +12,7 @@
 - `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`：第二页可直接投喂的专用文档
 - `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`：第三页可直接投喂的专用文档
 - `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`：第四页可直接投喂的专用文档
+- `v1.0_Gemini_Canvas_Review_Fix_Prompts.md`：针对生成结果 review 后的定向修正 prompt
 
 ## Usage Suggestion
 
@@ -38,3 +39,4 @@
 - 若你已经开始补主线中间页，优先直接使用 `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`
 - 若你已经进入推荐页生成，优先直接使用 `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`
 - 若你已经准备收口闭环页，优先直接使用 `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`
+- 若你已经拿到生成结果并准备按 review 结论修正，优先直接使用 `v1.0_Gemini_Canvas_Review_Fix_Prompts.md`
