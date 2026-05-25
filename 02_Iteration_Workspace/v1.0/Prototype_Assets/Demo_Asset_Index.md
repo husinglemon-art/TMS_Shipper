@@ -76,3 +76,4 @@
 - 本目录中的资产适合长期复用。
 - 若某张图只服务单个版本，也可同步保留到 `02_Iteration_Workspace/v1.0/Prototype_Archive/`。
 - 若下一步开始画图，建议先补 `v1.0_Page_Spec.md`，再进入线框或高保真页面。
+- 原型工具生成结果需持续回对 `04_Prototype_Notes.md`、`05_PRD_Final.md` 和 `v1.0_Page_Spec.md`，若冲突则以这些版本文档的已锁定口径为准。
