@@ -10,6 +10,7 @@
 - `Journey_Map.md`
 - `Interaction_Rules.md`
 - `Demo_Storyline.md`
+- `Gemini_Canvas_Workflow.md`
 
 ## When To Use
 
@@ -17,6 +18,7 @@
 - 做页面流表达
 - 准备截图或演示材料
 - 输出交互逻辑和演示叙事
+- 沉淀 Gemini Canvas 的生成与 review 方法
 
 ## Maintenance Rule
 
