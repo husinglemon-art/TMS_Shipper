@@ -34,3 +34,8 @@
 - `vX.X_Prototype_Tool_Prompts.md`
 - `Stitch/`
 - `Gemini_Canvas/`
+
+若使用 `Gemini_Canvas`，建议同时补以下流程模板：
+
+- `Gemini_Canvas/vX.X_Gemini_Canvas_Generation_Guardrails.md`
+- `Gemini_Canvas/vX.X_Prototype_Review_Log.md`
