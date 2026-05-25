@@ -63,8 +63,9 @@ const INITIAL_ORDERS = [
     weight: 6.8,
     volume: 18.0,
     type: "整车",
-    requiredArrival: "2026-05-21 12:00", // Requires strict arrival buffer (12 hour safe limit)
-    scenario: "前程陆运说明", // Treated as high-priority cutoff simulation case
+    requiredArrival: "2026-05-21 12:00",
+    scenario: "内贸工厂到工厂", // Restructured as standard domestic scenario
+    isSpecialCutoff: true,      // Quiet boolean marker for the Screen 3 rule note 
     status: "待规划",
     description: "工厂急需装配料，涉及下沙备料仓严格的12小时卸货窗口红线。"
   },
@@ -138,9 +139,9 @@ const INITIAL_CARRIERS = [
 ];
 
 export default function App() {
-  const [activeStep, setActiveStep] = useState(3); // Default to Screen 3 as requested by query
+  const [activeStep, setActiveStep] = useState(1); // Defaulting to the Order Pool
   const [orders, setOrders] = useState(INITIAL_ORDERS);
-  const [selectedIds, setSelectedIds] = useState(["ORD-20260520-001", "ORD-20260520-003"]); // Default has the urgent item
+  const [selectedIds, setSelectedIds] = useState(["ORD-20260520-001", "ORD-20260520-003"]); // Default selected standard domestic items
 
   // Filters
   const [searchTerm, setSearchTerm] = useState("");
@@ -650,10 +651,10 @@ export default function App() {
                           </td>
                           <td className="py-3.5 px-4">
                             <span className={`px-2 py-0.5 rounded text-[10px] ${o.id === "ORD-20260520-003"
-                                ? "bg-amber-500/10 text-amber-400 border border-amber-500/20"
+                                ? "bg-slate-800 text-slate-300 border border-slate-700"
                                 : "bg-slate-800 text-slate-400 border border-slate-700"
                               }`}>
-                              {o.scenario === "前程陆运说明" ? "前程急调拨" : o.scenario === "内贸工厂到工厂" ? "内贸直发" : "零担配载"}
+                              {o.id === "ORD-20260520-003" ? "内贸工厂到工厂 (特急)" : o.scenario}
                             </span>
                           </td>
                           <td className="py-3.5 px-4 text-center">
@@ -767,7 +768,9 @@ export default function App() {
                           <div key={order.id} className="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-2">
                             <div className="flex justify-between items-center">
                               <span className="font-mono text-indigo-400 font-bold">{order.id}</span>
-                              <span className="text-slate-400 text-[10px] font-semibold">{order.scenario === "前程陆运说明" ? "前程急调拨" : "内贸直发"}</span>
+                              <span className="text-slate-400 text-[10px] font-semibold">
+                                {order.id === "ORD-20260520-003" ? "内贸特急件" : "内贸直发"}
+                              </span>
                             </div>
                             <div className="flex justify-between text-slate-300">
                               <span>提货: {order.pickup}</span>
@@ -937,7 +940,7 @@ export default function App() {
         )}
 
         {/* ========================================== */}
-        {/* PAGE 3: 承运商推荐 (Refined Screen 3)       */}
+        {/* PAGE 3: 承运商推荐                         */}
         {/* ========================================== */}
         {activeStep === 3 && (
           <div className="space-y-6 animate-fadeIn">
@@ -1012,7 +1015,6 @@ export default function App() {
                   </div>
                 </div>
 
-                { }
                 {/* PRIMARY SECTION: Truly Eligible Candidates */}
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-300 pl-1">
@@ -1142,7 +1144,6 @@ export default function App() {
                   )}
                 </div>
 
-                { }
                 {/* SECONDARY AUDIT SECTION: Downgraded/disqualified Risk Candidates */}
                 {disqualifiedCarriers.length > 0 && (
                   <div className="space-y-3 pt-2">
@@ -1361,99 +1362,95 @@ export default function App() {
                       <FileText className="h-4.5 w-4.5 text-indigo-400" />
                       确认指派与发运任务下发
                     </h3>
-                    <p className="text-xs text-slate-400 mt-0.5 text-semibold">
-                      请核对车队运能指标与运费明细，确认后将正式向合作承运商下达货主调度任务。
+                    <p className="text-xs text-slate-400 mt-0.5 font-normal">
+                      请最后核对承运商议价、SLA时效承诺与拼载重积。确认后将下发给承运商车队。
                     </p>
                   </div>
 
                   {!isSubmitted ? (
                     <span className="bg-slate-950 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded text-[10.5px] font-bold">
-                      状态: 待指派下发
+                      状态: 待最终指派
                     </span>
                   ) : (
                     <span className="bg-emerald-950/40 text-emerald-400 border border-emerald-900/30 px-2.5 py-1 rounded text-[10.5px] font-bold flex items-center gap-1">
-                      <CheckCircle className="h-3.5 w-3.5" /> 调度任务已下发
+                      <CheckCircle className="h-3.5 w-3.5" /> 运输任务已生成
                     </span>
                   )}
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-xs font-semibold">
 
-                  {/* Left Column */}
+                  {/* Left Column: Core Shipment Specs & Sub-Orders */}
                   <div className="lg:col-span-2 space-y-4">
                     <div className="bg-slate-900 p-5 rounded-xl border border-slate-800 space-y-4">
                       <span className="text-xs font-bold text-indigo-400 block border-b border-slate-800 pb-2 uppercase tracking-wide">
-                        1. 拟选定承运商协议明细
+                        1. 拟选定承运车队与协议对账款项
                       </span>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 space-y-1">
-                          <span className="text-slate-500 text-[9px] uppercase font-bold block">选定承运商</span>
+                          <span className="text-slate-500 text-[9px] uppercase font-bold block">选定常协承运商</span>
                           <span className="text-slate-200 block font-bold text-[11px]">{activeCarrierInfo.name}</span>
-                          <span className="text-[10px] text-slate-400 block mt-1">综合考核：{activeCarrierInfo.score}/100</span>
+                          <span className="text-[10px] text-slate-400 block mt-1">综合月度绩效：{activeCarrierInfo.score}分</span>
                         </div>
 
                         <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 space-y-1">
-                          <span className="text-slate-500 text-[9px] uppercase font-bold block">拟指派车型</span>
+                          <span className="text-slate-500 text-[9px] uppercase font-bold block">拟指派车型/装配</span>
                           <span className="text-slate-200 block font-bold text-[11px]">{currentTruckSuggestion.type}</span>
-                          <span className="text-[10px] text-slate-400 block mt-1">载荷重量：{stats.weight} 吨</span>
+                          <span className="text-[10px] text-slate-400 block mt-1">配载利用：约 {stats.weight} 吨</span>
                         </div>
 
                         <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 space-y-1">
-                          <span className="text-slate-500 text-[9px] uppercase font-bold block">合同单次运费</span>
+                          <span className="text-slate-500 text-[9px] uppercase font-bold block">常协协议单次运费</span>
                           <span className="text-emerald-400 block font-bold text-xs font-mono">¥{activeCarrierInfo.quote?.toLocaleString()} 元</span>
                           <span className="text-[10px] text-slate-400 block mt-1">{activeCarrierInfo.deviation}</span>
                         </div>
                       </div>
 
-                      <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 text-[11px] text-slate-300">
-                        <strong>💡 公益性常协核减结果：</strong>
-                        <span>
-                          本次干线计划方案已通过大盘价差校验，报价符合公允区间。
-                          {isUrgentOrderIncluded && "（太仓急件在途时效限制核验通过）"}
-                        </span>
+                      <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 text-[11px] text-slate-400 leading-normal font-normal">
+                        ℹ️ <strong>决策公允说明：</strong>本次指派合同价格经系统合理度测算，符合该线路常协框架范围，且在途时效安全指标符合下游工厂生产窗口要求。
                       </div>
                     </div>
 
-                    {/* Associated orders */}
+                    {/* Associated Domestic Orders */}
                     <div className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden">
                       <div className="p-3.5 bg-slate-800/60 border-b border-slate-800 flex justify-between items-center">
                         <span className="text-slate-200 font-bold uppercase tracking-wider text-[11px]">
-                          关联的原生 WMS / ERP 发货需求 ({activeSelectedOrders.length} 笔)
+                          关联的发货调拨清单 ({activeSelectedOrders.length} 笔)
                         </span>
                         <span className="text-slate-400 text-[10.5px]">
-                          合并重积：<strong className="text-indigo-400 font-mono">{stats.weight} 吨</strong>
+                          合并总重积：<strong className="text-indigo-400 font-mono">{stats.weight} 吨</strong>
                         </span>
                       </div>
 
                       <table className="w-full text-left">
                         <thead>
                           <tr className="bg-slate-950 text-slate-500 text-[10px] font-bold border-b border-slate-800 uppercase">
-                            <th className="py-2.5 px-4">原始需求单号</th>
-                            <th className="py-2.5 px-4">发运提货流向</th>
-                            <th className="py-2.5 px-4 text-right">货重体积</th>
-                            <th className="py-2.5 px-4 text-center">状态反馈</th>
+                            <th className="py-2.5 px-4">发货单号</th>
+                            <th className="py-2.5 px-4">发运起止节点</th>
+                            <th className="py-2.5 px-4 text-right">货重/体积</th>
+                            <th className="py-2.5 px-4 text-center">调度交接状态</th>
                           </tr>
                         </thead>
-                        <tbody className="divide-y divide-slate-800">
+                        <tbody className="divide-y divide-slate-800 text-[11px] font-normal">
                           {activeSelectedOrders.map(o => (
                             <tr key={o.id} className="hover:bg-slate-800/20">
                               <td className="py-3 px-4 font-mono font-bold text-slate-200">
                                 {o.id}
                               </td>
                               <td className="py-3 px-4 text-slate-300">
-                                <span className="font-bold">{o.pickup}</span> &rarr; <span>{o.delivery}</span>
+                                <span className="font-semibold text-slate-200">{o.pickup}</span> &rarr; <span className="text-slate-300">{o.delivery}</span>
                               </td>
                               <td className="py-3 px-4 text-right font-mono text-slate-400">
                                 {o.weight} 吨 / {o.volume} m³
                               </td>
                               <td className="py-3 px-4 text-center">
                                 {isSubmitted ? (
-                                  <span className="text-emerald-400 font-bold bg-emerald-950/20 border border-emerald-900/30 px-2.5 py-0.5 rounded text-[10px]">
-                                    任务已下发 · 待装货
+                                  <span className="text-emerald-400 font-semibold bg-emerald-950/20 border border-emerald-900/30 px-2 py-0.5 rounded text-[10px]">
+                                    任务已就绪 · 等待月台装货
                                   </span>
                                 ) : (
-                                  <span className="text-slate-500 text-[10px]">等待指派生成</span>
+                                  <span className="text-slate-500 text-[10px]">等待调度确认</span>
                                 )}
                               </td>
                             </tr>
@@ -1464,107 +1461,110 @@ export default function App() {
 
                   </div>
 
-                  {/* Right Column */}
+                  {/* Right Column: Submission States & Actionable Entries */}
                   <div className="space-y-4">
 
                     {!isSubmitted ? (
                       <div className="bg-slate-900 p-5 rounded-xl border border-slate-800 space-y-4 flex flex-col justify-between min-h-[280px]">
                         <div className="space-y-3">
                           <span className="text-xs font-bold text-indigo-400 block border-b border-slate-800 pb-2 uppercase tracking-wider">
-                            指派下发核实
+                            确认派车指派
                           </span>
 
-                          <div className="space-y-2 text-slate-300">
+                          <div className="space-y-2.5 text-slate-300 text-[11.5px]">
                             <div className="flex justify-between border-b border-slate-850 pb-2">
-                              <span>指派车队:</span>
+                              <span className="text-slate-400">指派承运车队:</span>
                               <strong className="text-slate-100">{activeCarrierInfo.name}</strong>
                             </div>
                             <div className="flex justify-between border-b border-slate-850 pb-2">
-                              <span>协议核算运费:</span>
+                              <span className="text-slate-400">商定协议运费:</span>
                               <strong className="text-emerald-400 font-mono">¥{activeCarrierInfo.quote?.toLocaleString()} 元</strong>
                             </div>
                             <div className="flex justify-between border-b border-slate-850 pb-2">
-                              <span>时效考核指标:</span>
+                              <span className="text-slate-400">承诺安全时效:</span>
                               <strong className="text-amber-400 font-mono">{activeCarrierInfo.transit}</strong>
                             </div>
                             <div className="flex justify-between">
-                              <span>指派合并单量:</span>
-                              <strong className="font-mono">{selectedIds.length} 笔订单</strong>
+                              <span className="text-slate-400">合并发货笔数:</span>
+                              <strong className="font-mono text-slate-200">{selectedIds.length} 笔订单</strong>
                             </div>
                           </div>
                         </div>
 
                         <div className="pt-4 border-t border-slate-800 space-y-3">
-                          <p className="text-[10px] text-slate-500 leading-normal">
-                            💡 任务下发后，对应工厂的排车预约系统与合作车队ERP将自动同步。车辆调度与厂区月台排班工作同步开始。
+                          <p className="text-[10px] text-slate-500 leading-normal font-normal">
+                            * 确认无误后，系统将自动生成运输任务单，并向承运车队发送排班通知。
                           </p>
 
                           <button
                             onClick={() => {
                               setIsSubmitted(true);
-                              triggerToast("公路运输任务下发成功，已派单至常协承运商端！", "success");
+                              triggerToast("公路发运任务生成成功，已下发指派指令！", "success");
                             }}
                             className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-slate-950 font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider transition-all shadow-lg"
                           >
-                            确认指派并生成任务
+                            确认指派并生成运输任务
                           </button>
                         </div>
                       </div>
                     ) : (
 
-                      /* Post-submission Success State */
-                      <div className="bg-emerald-950/20 p-5 rounded-xl border border-emerald-800/40 space-y-4">
+                      /* Post-submission: Operational Next-Step Success Screen */
+                      <div className="bg-slate-900 p-5 rounded-xl border border-emerald-500/30 space-y-4">
 
-                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-emerald-900/30">
-                          <div className="p-2 bg-emerald-500 text-slate-950 rounded-lg">
+                        {/* Success Title Area */}
+                        <div className="flex items-center gap-2.5 pb-2.5 border-b border-slate-800">
+                          <div className="p-2 bg-emerald-500 text-slate-950 rounded-lg shrink-0">
                             <CheckCircle className="h-5 w-5" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-emerald-400 text-xs">发运指派下发成功</h4>
-                            <span className="text-[9.5px] text-slate-400 block uppercase font-mono mt-0.5">Workflow Completed</span>
+                            <h4 className="font-bold text-emerald-400 text-xs">国内陆运任务生成成功</h4>
+                            <span className="text-[9.5px] text-slate-400 block font-mono mt-0.5">TASK GENERATED</span>
                           </div>
                         </div>
 
-                        <div className="bg-slate-950 p-3.5 rounded-lg border border-slate-850 space-y-3 font-mono text-[11px]">
-
-                          <div className="flex justify-between items-center pb-1.5 border-b border-slate-900">
+                        {/* Task Metadata Card */}
+                        <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 font-mono text-[11px] space-y-2">
+                          <div className="flex justify-between pb-1.5 border-b border-slate-900">
                             <span className="text-slate-500 font-sans">运输任务单号</span>
                             <span className="text-indigo-400 font-bold">TSK-20260520-001</span>
                           </div>
-
-                          <div className="flex justify-between items-center pb-1.5 border-b border-slate-900">
-                            <span className="text-slate-500 font-sans">承运车队</span>
+                          <div className="flex justify-between pb-1.5 border-b border-slate-900">
+                            <span className="text-slate-500 font-sans">承运商车队</span>
                             <span className="text-slate-200 font-sans font-bold">{activeCarrierInfo.name}</span>
                           </div>
-
-                          <div className="flex justify-between items-center pb-1.5 border-b border-slate-900">
-                            <span className="text-slate-500 font-sans">匹配车型</span>
-                            <span className="text-slate-200 font-sans truncate max-w-[120px] text-right">{currentTruckSuggestion.type?.split("米")[0]}米车厢</span>
-                          </div>
-
-                          <div className="flex justify-between items-center pb-1.5 border-b border-slate-900">
+                          <div className="flex justify-between pb-1.5 border-b border-slate-900">
                             <span className="text-slate-500 font-sans">当前任务状态</span>
-                            <span className="text-emerald-400 font-sans font-bold bg-emerald-950/50 px-2 py-0.2 rounded border border-emerald-900/20">
-                              已指派 (车队接单中)
-                            </span>
+                            <span className="text-emerald-400 font-sans font-bold">已指派 (车队接单中)</span>
                           </div>
-
-                          <div className="flex justify-between items-center pb-1.5 border-b border-slate-900">
-                            <span className="text-slate-500 font-sans">任务创建时间</span>
-                            <span className="text-slate-400">2026-05-22 10:46</span>
-                          </div>
-
-                          <div className="pt-1.5 border-t border-slate-900">
-                            <span className="text-slate-500 font-sans block mb-1">下一步建议动作:</span>
-                            <p className="text-slate-300 font-sans leading-relaxed text-[10px]">
-                              本单已在调度工作台归档锁定。常协承运商已被告知排班，请通知发货工厂理货组进入备货环节。
-                            </p>
-                          </div>
-
                         </div>
 
-                        <div className="bg-slate-950/60 p-2.5 rounded border border-slate-850 text-slate-400 text-[10px] leading-relaxed">
-                          <span>✓ 发运任务信息已异步传至相关厂区出货调度（WMS/ERP）。</span>
+                        {/* NEXT-STEP TASK ENTRY: Highly visible next instructions */}
+                        <div className="bg-indigo-950/20 border border-indigo-500/20 rounded-lg p-3.5 space-y-2.5">
+                          <span className="text-indigo-400 font-bold text-[11px] block tracking-wide uppercase">
+                            👉 下一步作业引导 (Next Actions)
+                          </span>
+
+                          <div className="space-y-2 text-[10.5px] text-slate-300 font-normal leading-relaxed">
+                            <div className="flex gap-2">
+                              <span className="w-4 h-4 rounded-full bg-slate-850 text-indigo-400 flex items-center justify-center font-bold font-mono text-[9px] shrink-0 mt-0.5">1</span>
+                              <p><strong>车队调度确认：</strong>车队派单调度岗已收到API预约通知，承运商需在 1 小时内反馈车牌及司机北斗设备号。</p>
+                            </div>
+                            <div className="flex gap-2">
+                              <span className="w-4 h-4 rounded-full bg-slate-850 text-indigo-400 flex items-center justify-center font-bold font-mono text-[9px] shrink-0 mt-0.5">2</span>
+                              <p><strong>月台排班预约：</strong>发货工厂排车大屏已同步装载窗口，提货点（厂区1号门月台）准备理货备货。</p>
+                            </div>
+                            <div className="flex gap-2">
+                              <span className="w-4 h-4 rounded-full bg-slate-850 text-indigo-400 flex items-center justify-center font-bold font-mono text-[9px] shrink-0 mt-0.5">3</span>
+                              <p><strong>打印交接单：</strong>可在发运大厅终端一键打印出厂出门证及纸质装载凭证。</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Minimalized ERP/WMS sync note - Keeping it minor and secondary */}
+                        <div className="pt-2 border-t border-slate-800 text-[10px] text-slate-500 font-normal flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
+                          <span>* 状态同步：已完成原生 ERP/WMS 的发运锁定同步 (API: OK)</span>
                         </div>
 
                       </div>
@@ -1575,10 +1575,10 @@ export default function App() {
                 </div>
 
                 <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-4">
-                  <span className="text-slate-400 text-[11px] font-semibold">
+                  <span className="text-slate-400 text-[11px] font-normal">
                     {isSubmitted
-                      ? "✓ 常协协议车队派单任务已闭环，调度决策流程完结。"
-                      : "审核公路发运单将有助于提高跨区域常协合同合规性。"
+                      ? "✓ 常协车队派发流程已全部闭环，当前决策记录已留底归档。"
+                      : "确认指派后，调度方案即锁定生效并下发车队作业。"
                     }
                   </span>
 
@@ -1592,16 +1592,16 @@ export default function App() {
                       }}
                       className="px-5 py-2 rounded-lg bg-slate-950 text-slate-300 hover:text-white border border-slate-850 font-bold text-xs"
                     >
-                      返回订单池首页
+                      返回待规划列表
                     </button>
 
                     <button
                       onClick={() => {
-                        triggerToast("业务数据同步至 ERP / WMS 平台中...");
+                        triggerToast("正在打印纸质装载交接单...");
                       }}
                       className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-slate-950 px-6 py-2 rounded-lg text-xs font-bold transition-all shadow"
                     >
-                      数据同步至 ERP/WMS
+                      打印出厂纸质凭证
                     </button>
                   </div>
                 </div>
