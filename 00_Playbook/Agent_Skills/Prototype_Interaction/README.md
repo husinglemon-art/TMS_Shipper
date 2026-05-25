@@ -11,6 +11,7 @@
 - `Interaction_Rules.md`
 - `Demo_Storyline.md`
 - `Gemini_Canvas_Workflow.md`
+- `Prototype_Minimum_Workflow.md`
 
 ## When To Use
 
@@ -19,6 +20,7 @@
 - 准备截图或演示材料
 - 输出交互逻辑和演示叙事
 - 沉淀 Gemini Canvas 的生成与 review 方法
+- 快速回看每个版本都适用的最小原型工作流
 
 ## Maintenance Rule
 

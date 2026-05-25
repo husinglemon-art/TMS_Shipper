@@ -93,6 +93,8 @@
   - 用途：截图、页面记录、外部追踪与展示辅助
 - `Prototype_Interaction/Gemini_Canvas_Workflow.md`
   - 用途：Gemini Canvas 原型生成与修正流程方法沉淀
+- `Prototype_Interaction/Prototype_Minimum_Workflow.md`
+  - 用途：每个版本都可复用的一页版最小原型工作流
 
 ### Why Keep
 
