@@ -30,6 +30,7 @@
 原型相关使用建议：
 
 - `04_Prototype_Notes.md` 用于记录原型评审口径、页面清单和待定项
+- `04_Prototype_Notes.md` 中建议额外记录“当前冻结基线”和“不再继续大改的范围”
 - `Prototype_Assets/` 用于沉淀实际落图材料，例如页面规格、页面内容、线框备注和原型工具提示词
 - 若某些展示资产需要跨版本复用，再整理到根级 `03_Shared_Prototype_Assets/`
 - 若使用原型工具，建议在 `Prototype_Assets/` 下按工具建立独立子目录，例如 `Stitch/`、`Gemini_Canvas/`
