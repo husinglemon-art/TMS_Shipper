@@ -71,6 +71,7 @@
 - Stitch 专用提示词：已有首版骨架
 - Gemini Canvas 专用提示词：已有首版骨架
 - 当前 Gemini Canvas 原型代码：已形成可评审版本，可进入截图、评审和演示阶段
+- 当前评审基线：`Gemini_Canvas/tms_control_tower.tsx` 可作为本轮 `v1.0` 的原型评审基线，后续如无新增业务范围，不建议继续大幅改动主线结构
 
 ## Notes
 
