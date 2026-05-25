@@ -6,14 +6,24 @@
 
 ## Current Files
 
-- `v1.0_Gemini_Canvas_Prompts.md`：适合结构化输入的 Gemini Canvas 提示词
-- `v1.0_Gemini_Canvas_Copy_Pack.md`：可直接复制到 Gemini Canvas 的最小投喂包
-- `v1.0_Gemini_Canvas_Screen1_Ready_To_Paste.md`：第一页可直接投喂的专用文档
-- `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`：第二页可直接投喂的专用文档
-- `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`：第三页可直接投喂的专用文档
-- `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`：第四页可直接投喂的专用文档
-- `v1.0_Gemini_Canvas_Review_Fix_Prompts.md`：针对生成结果 review 后的定向修正 prompt
+- `v1.0_Gemini_Canvas_Final_Prompt_Kit.md`：当前版本 `Gemini Canvas` 的最终版统一入口，优先使用
 - `v1.0_Gemini_Canvas_Final_Workflow.md`：总结本次验证有效的最终使用流程
+- `tms_control_tower.tsx`：当前 `v1.0` 的 Gemini Canvas 原型评审基线代码
+
+## Legacy Files
+
+- `Legacy/v1.0_Gemini_Canvas_Prompts.md`
+- `Legacy/v1.0_Gemini_Canvas_Copy_Pack.md`
+- `Legacy/v1.0_Gemini_Canvas_Screen1_Ready_To_Paste.md`
+- `Legacy/v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`
+- `Legacy/v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`
+- `Legacy/v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`
+- `Legacy/v1.0_Gemini_Canvas_Review_Fix_Prompts.md`
+
+说明：
+
+- 上述 `Legacy/` 文件保留为本次 `v1.0` 的生成与修正历史参考
+- 后续继续使用 `Gemini Canvas` 时，不再以这些分散文件作为主要入口
 
 ## Usage Suggestion
 
@@ -35,9 +45,5 @@
 - 建议保留结构化英文 brief 以提升生成稳定性
 - 同时保留中文说明和必要的中文对照，便于按中文习惯审阅和补充
 - 推荐实际使用方式：英文 brief 直接投喂工具，中文对照用于人工确认、复核和补充细节
-- 若你想减少拼装动作，优先直接使用 `v1.0_Gemini_Canvas_Copy_Pack.md`
-- 若你已经确定先做第一页，优先直接使用 `v1.0_Gemini_Canvas_Screen1_Ready_To_Paste.md`
-- 若你已经开始补主线中间页，优先直接使用 `v1.0_Gemini_Canvas_Screen2_Ready_To_Paste.md`
-- 若你已经进入推荐页生成，优先直接使用 `v1.0_Gemini_Canvas_Screen3_Ready_To_Paste.md`
-- 若你已经准备收口闭环页，优先直接使用 `v1.0_Gemini_Canvas_Screen4_Ready_To_Paste.md`
-- 若你已经拿到生成结果并准备按 review 结论修正，优先直接使用 `v1.0_Gemini_Canvas_Review_Fix_Prompts.md`
+- 当前 `v1.0` 优先直接使用 `v1.0_Gemini_Canvas_Final_Prompt_Kit.md`
+- 若必须回看旧过程资料，再进入 `Legacy/` 目录查看
