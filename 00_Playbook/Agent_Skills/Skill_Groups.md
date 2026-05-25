@@ -91,6 +91,8 @@
   - 用途：场景化表达与演示叙事
 - `Prototype_Interaction/Evidence_Capture.md`
   - 用途：截图、页面记录、外部追踪与展示辅助
+- `Prototype_Interaction/Gemini_Canvas_Workflow.md`
+  - 用途：Gemini Canvas 原型生成与修正流程方法沉淀
 
 ### Why Keep
 
