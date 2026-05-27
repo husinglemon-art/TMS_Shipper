@@ -114,7 +114,7 @@
 
 ## 4. 资产链接
 
-- 原型链接：待补充
+- 原型链接：`https://gemini.google.com/share/81daa86dc35c`
 - demo 链接：待补充
 - 截图目录：`02_Iteration_Workspace/v1.0/Prototype_Assets/`
 
