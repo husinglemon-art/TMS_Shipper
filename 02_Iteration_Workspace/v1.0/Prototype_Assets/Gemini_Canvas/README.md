@@ -10,6 +10,10 @@
 - `v1.0_Gemini_Canvas_Final_Workflow.md`：总结本次验证有效的最终使用流程
 - `tms_control_tower.tsx`：当前 `v1.0` 的 Gemini Canvas 原型评审基线代码
 
+## Current Prototype Link
+
+- 最终分享链接：`https://gemini.google.com/share/81daa86dc35c`
+
 ## Legacy Files
 
 - `Legacy/v1.0_Gemini_Canvas_Prompts.md`
